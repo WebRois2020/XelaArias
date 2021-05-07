@@ -1,0 +1,231 @@
+#featured_slide {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0px;
+	font-family: "Times New Roman", Times, serif;
+
+	/*
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row;
+	flex-flow: row;
+	justify-content: space-between;
+	align-content: stretch;
+*/
+
+
+}
+
+/* ------------------------------ Main Category Slider ------------------------------------- */
+
+#slider {
+	position: relative;
+	width: auto;
+	height: 100%;
+	margin: 1em;
+	padding: 0em;
+
+	/*
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-content: stretch;
+*/
+}
+
+
+#slider ul {
+	width: 100%;
+	height: auto;
+
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-flow: row;
+	flex-flow: row;
+	justify-content: flex-start;
+	align-content: stretch;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding: 0em;
+	list-style: none;
+
+}
+
+#slider li {
+	width: 18%;
+	height: auto;
+	align-content: stretch;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding: 0.5em;
+	margin: 0 auto;
+	/*color: #9FA4AA;*/
+	color: #fff;
+	background-color: #161616;
+
+	/*	background-color: #fff;
+	*/
+	/*	#2B2B2B*/
+
+}
+
+#slider li img {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	padding: 4px;
+	border: 1px solid #9FA4AA;
+	border-radius: 0.2em;
+}
+
+
+#slider li a {
+	color: #161616;
+
+}
+
+.category a > img:hover {
+	/*	box-shadow: 3px 3px 3px 2px #9FA4AA;
+	*/
+	box-shadow: 0px 0px 4px 4px #fff;
+	-moz-box-shadow: 0px 0px 4px 4px #fff;
+	-webkit-box-shadow: 0px 0px 4px 4px #fff;
+}
+
+#slider li h2 {
+	margin-bottom: 10px;
+	padding: 1em;
+	font-size: 1em;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: center;
+	/*color: #ACACAC;*/
+	color: #fff;
+	background-color: #2B2B2B;
+	border-bottom: 1px solid #464646;
+
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+	box-shadow: 0px 0px 4px #ccc;
+	-moz-box-shadow: 0px 0px 4px #ccc;
+	-webkit-box-shadow: 0px 0px 4px #ccc;
+}
+
+#slider .category p {
+	line-height: 1.2em;
+	margin: 0em 0 12px 0;
+	font-family: serif;
+	font-size: 1.05em;
+}
+
+#slider hr {
+	margin: 2em 0 12px 0;
+
+}
+
+/* tooltip */
+
+a.cssToolTip {
+	position: relative;
+	/* Esta clase tiene que tener posicion relativa */
+	color: #000;
+	/* Color del texto */
+}
+
+
+a.cssToolTip span {
+	/*	background-color: #2B2B2B;*/
+	background: rgba(43, 43, 43, 0.9);
+	border: 2px solid #fff;
+	color: #000;
+	display: none;
+	/* El tooltip por defecto esta oculto */
+	width: 50%;
+	position: relative;
+	bottom: auto;
+	left: 3em;
+	z-index: 999999;
+	line-height: 2em;
+	padding: 1em;
+	margin: 0 auto;
+	font-size: 1em;
+	text-align: left;
+	color: #fff;
+
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+	box-shadow: 0px 0px 4px #ccc;
+	-moz-box-shadow: 0px 0px 4px #ccc;
+	-webkit-box-shadow: 0px 0px 4px #ccc;
+
+	opacity: 0.8;
+	visibility: visible;
+	color: #fff;
+
+	white-space: nowrap;
+}
+
+/* El tooltip cuando se muestra */
+
+a.cssToolTip:hover span {
+	display: block;
+	position: fixed;
+	bottom: 0%;
+	left: 0%;
+	transition: all 0.1s ease 0.5s;
+}
+
+#featured_slide2 {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0px;
+	font-family: "Times New Roman", Times, serif;
+
+	/*
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row;
+	flex-flow: row;
+	justify-content: space-between;
+	align-content: stretch;
+*/
+
+}
+
+#featured_slide2 img#aumenta {
+	width: 30%;
+	border: none;
+	margin: 0 auto;
+	border-radius: 0.5em;
+	box-shadow: 0px 0px 4px 4px #fff;
+	-moz-box-shadow: 0px 0px 4px 4px #fff;
+	-webkit-box-shadow: 0px 0px 4px 4px #fff;
+	filter: sepia(20%);
+}
+
+#featured_slide2 img#aumenta:hover {
+	transform: translate(0%, -10%)scale(1.7);
+	-webkit-transform: translate(0%, -10%) scale(1.7);
+	/** Safari & Chrome **/
+	-o-transform: translate(0%, -10%) scale(1.7);
+	/** Opera **/
+	-moz-transform: translate(0%, -10%) scale(1.7);
+	/** Firefox **/
+	box-shadow: 0px 0px 4px 3px #fff;
+	-moz-box-shadow: 0px 0px 4px 3px #fff;
+	-webkit-box-shadow: 0px 0px 4px 3px #fff;
+
+}

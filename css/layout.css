@@ -1,0 +1,240 @@
+html {
+	overflow-y: scroll;
+}
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 1em;
+	font-family: "Times New Roman", Times, serif;
+	color: #fff;
+	background-color: #161616;
+	width: 90vw;
+}
+
+.justify {
+	text-align: justify;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.nostart {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.clear:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+}
+
+.clear {
+	display: inline-block;
+}
+
+a {
+	outline: none;
+	text-decoration: none;
+}
+
+
+/* ---------------------------------------------- Wrapper ------------------------------------- */
+
+div.wrapper {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.col1 {
+	color: #FFFFFF;
+	background-color: #161616;
+	padding-bottom: 30px;
+}
+
+p.category {
+	line-height: 1.6em;
+	margin: 0 0 12px 0;
+	/*color: #ACACAC;*/
+	color: #fff;
+	display: block;
+	width: 60%;
+
+	margin: 0 auto;
+	padding: 0.2em;
+	font-size: 1em;
+	font-family: sans-serif;
+}
+
+p.category2 {
+	line-height: 1.6em;
+	margin: 0 0 12px 1em;
+	/*color: #ACACAC;*/
+	color: #fff;
+	width: auto;
+
+	margin: 0;
+	padding: 0.5em;
+	font-size: 1.2em;
+	font-family: sans-serif;
+}
+
+/* ---------------------------------------------- Generalise ------------------------------------- */
+
+#header,
+#footer,
+#copyright {
+	display: block;
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+}
+
+/* ---------------------------------------------- Header ------------------------------------- */
+
+#header {
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	background: #fff;
+}
+
+#header h1,
+#header p,
+#header ul {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+}
+
+#header h1 a {
+	font-size: 46px;
+	color: #fff;
+	background-color: #161616;
+	text-align: center;
+}
+
+#header h1 {
+	margin: 0em 0em 0em 0em;
+	background-color: #fff;
+	color: #161616;
+	text-align: left;
+	padding: .1em .1em .1em .5em;
+
+}
+
+
+/* ---------------------------------------------- Footer ------------------------------------- */
+
+#footer {
+	padding: 20px 0;
+}
+
+#footer h2,
+#footer p,
+#footer ul,
+#footer a {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	list-style: none;
+	line-height: 1.6em;
+	font-style: normal;
+}
+
+#footer,
+#footer a {
+	color: #fff;
+	background-color: #161616;
+}
+
+#footer .footbox {
+	display: block;
+	float: left;
+	width: 225px;
+	margin: 0 20px 0 0;
+	padding: 0;
+}
+
+#footer h2 {
+	margin-bottom: 20px;
+	font-size: 26px;
+	font-style: italic;
+}
+
+#footer p {
+	margin-bottom: 10px;
+}
+
+#footer li {
+	margin: 0 0 5px 0;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #333333;
+}
+
+#footer li strong.title {
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#footer .last {
+	margin: 0;
+}
+
+/* ---------------------------------------------- Copyright ------------------------------------- */
+
+#copyright {
+	margin: 3em auto;
+	text-align: center;
+	padding: 0px 0;
+	border-top: 1px solid #333333;
+}
+
+#copyright p {
+	margin: 0;
+	padding: 0;
+}
+
+
+#copyright a {
+	color: #fff;
+	background-color: #161616;
+}
+
+
+
+
+/* ---------------------- Demasiado estrecho para soportar tres columnas? ------------------ */
+
+@media all and (max-width: 640px) {
+	#main {
+		-webkit-flex-flow: column;
+		flex-flow: column;
+
+	}
+
+	header,
+	footer {
+		min-height: 50px;
+		max-height: 50px;
+
+	}
+}
