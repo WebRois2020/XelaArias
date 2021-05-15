@@ -1,0 +1,131 @@
+i{
+    color: beige;
+}
+h1{
+	margin: 0;
+	font-size: calc(2vw + 20px);
+	position: absolute;
+	left: 10%;
+	transform: translateZ(0.1px) scale(1.1);
+	font-family: 'Satisfy', cursive;
+	color: #b5ae84;
+	opacity: 1;
+    z-index: 9999999999999999999
+	/* susi: cambio a opacidade do texto opacity: 0.5;  */
+}
+
+h1.clone {
+	left: 60%;
+}
+
+body {
+	background: #181818;
+	color: white;
+	font-size: 200%;
+	width: 99vw;
+	height: 99vh;
+	overflow: hidden;
+
+	/*--border: 2px solid white;--*/
+}
+
+.opacity_foto{
+    opacity: 10;
+}
+.defilee__main {
+	position: relative;
+	margin: 0 auto;
+
+}
+
+.defilee__outer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	perspective: 0.5px;
+	transform-style: preserve-3d;
+	overflow: hidden;
+	/* Susi: elimino a barra scroll */
+}
+
+.defilee__main,
+.defilee__main *,
+.defilee__outer,
+.defilee__outer * {
+	box-sizing: border-box;
+}
+
+.defilee__ctnr {
+	transform-style: preserve-3d;
+
+	display: inline-flex;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.defilee__div {
+	position: relative;
+	transform: translate3d(0, -16vh, 0);
+	width: 25vw;
+	margin: 0 -2vw;
+}
+
+/* SUSI: cambiamos o tamaño scale(2) e onde se coloca translateX(30px) translateY(20vh) de cada forma */
+.defilee__div--special {
+
+	transform: translateZ(-0.2px) scale(3) translateX(00px) translateY(0vh);
+	/*border: 1px solid white;*/
+}
+
+.defilee__div--special1 {
+	transform: translateZ(-0.25px) scale(1.4) translateX(-0.3vw) translateY(0);
+
+}
+
+.defilee__div--special2 {
+	transform: translateZ(0.2px) scale(1) translateX(0.5vw) translateY(-25vh);
+}
+
+.defilee__div--special3 {
+	transform: translateZ(-0.5px) scale(1.5) translateX(-30px) translateY(-30vh);
+}
+
+.defilee__div--special4 {
+	transform: translateZ(-0.65px) scale(3) translateX(30px) translateY(-10vh);
+}
+
+.defilee__ctnr {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	will-change: ;
+
+}
+
+.defilee__ctnr {
+	/* susi: velocidade da animación */
+	animation: slide 100s infinite;
+}
+
+@keyframes slide {
+	100% {
+		-webkit-transform: translate3d(-50%, 0, 0);
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+* {
+	transform-origin: 50% 50%;
+}
+
+.defilee-visually-hidden {
+	border: 0 !important;
+	clip: rect(0 0 0 0) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+}
