@@ -1,0 +1,110 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
+<!--<link rel="stylesheet" href="css/main_revista.css">-->
+	<link rel="stylesheet" href="../principal/assets/css/main_principal.css">
+
+	</head>
+<body id="fondo" class="subpage">
+	<div id="page-wrapper">
+	<section id="header">
+					<div class="container">
+									<nav id="nav">
+										<a href="../principal/index_principal.html">Inicio</a>
+										<a href="../principal/biografia.html">Biografía</a>
+										<a href="../principal/obra.html">Obra</a>
+										<a href="../principal/inconforme.html">A inconforme</a>
+										<a href="../carrusel/index_carrusel.html">Galería poética</a>
+										<a href="../revista/index_revista.html">Revista</a>
+									</nav>
+							</div>
+
+				</section>
+<div class="flipbook-viewport">
+	<div class="container">
+		<div class="flipbook">
+			<div style="background-image:url(imaxes/revista_portada2.jpg)"></div>
+			<div style="background-image:url(imaxes/firma2.jpg)"></div>
+			<div style="background-image:url(imaxes/xoguete2.jpg)"></div>
+			<div style="background-image:url(imaxes/familia2.jpg)"></div>
+			<div style="background-image:url(imaxes/fala3.jpg)"></div>
+			<div style="background-image:url(imaxes/bici.jpg)"></div>
+			<div style="background-image:url(imaxes/mulleres_familia.jpg)"></div>
+			<div style="background-image:url(imaxes/rindo2.jpg)"></div>
+			<div style="background-image:url(imaxes/rindo3.jpg)"></div>
+			<div style="background-image:url(imaxes/vermello.jpg)"></div>
+			<div style="background-image:url(imaxes/poema1_editado.jpg)"></div>
+			<div style="background-image:url(imaxes/negro.jpg)"></div>
+			<div style="background-image:url(imaxes/fumando2.jpg)"></div>
+			<div style="background-image:url(imaxes/poema5_editado.jpg)"></div>
+			<div style="background-image:url(imaxes/mans.jpg)"></div>
+			<div style="background-image:url(imaxes/xerais1.jpg)"></div>
+			<div style="background-image:url(imaxes/xerais2.jpg)"></div>
+			<div style="background-image:url(imaxes/ollo.jpg)"></div>
+			<div style="background-image:url(imaxes/ollo2.jpg)"></div>
+			<div style="background-image:url(imaxes/ollo3.jpg)"></div>
+			<div style="background-image:url(imaxes/ollo4.jpg)"></div>
+			<div style="background-image:url(imaxes/nai.jpg)"></div>
+			<div style="background-image:url(imaxes/poema2_editado.jpg)"></div>
+			<div style="background-image:url(imaxes/poema3e.jpg)"></div>
+			<div style="background-image:url(imaxes/dario.jpg)"></div>
+			<div style="background-image:url(imaxes/xela3.jpg)"></div>
+			<div style="background-image:url(imaxes/xela1.jpg)"></div>
+			<div style="background-image:url(imaxes/poema4e1.jpg)"></div>
+			<div style="background-image:url(imaxes/poema4e2.jpg)"></div>
+			<div style="background-image:url(imaxes/rua1.jpg)"></div>
+			<div style="background-image:url(imaxes/rua2.jpg)"></div>
+			<div style="background-image:url(imaxes/mestra2.jpg)"></div>
+			
+			
+
+		</div>
+	</div>
+</div>
+			<!-- Copyright -->
+                <footer class="final">
+				<div id="copyright">
+					&copy; Letras Galegas 2021. | Autora homenaxeada: 
+                    <a href="https://nova.academia.gal/letras-galegas/2021/xela-arias" target="_blank">Xela Arias</a>
+				</div>
+                </footer>
+	</div>
+<script type="text/javascript">
+function loadApp() {
+	// Create the flipbook
+	$('.flipbook').turn({
+			// Width
+			width:860,
+			// Height
+			height:580,
+			// Elevation
+			elevation: 50,
+			// Enable gradients
+			gradients: true,
+			// Auto center this flipbook
+			autoCenter: true
+	});
+}
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['lib/turn.js'],
+	nope: ['lib/turn.html4.min.js'],
+	both: ['css/main_revista.css'],
+	complete: loadApp
+});
+
+</script>
+
+</body>
+</html>
