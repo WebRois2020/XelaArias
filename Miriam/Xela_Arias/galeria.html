@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Xela Arias</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
+     <script src="https://kit.fontawesome.com/2c7fc28a2f.js"></script>
+     <link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css">
+     <link rel="stylesheet" type="text/css" media="screen" href="css/estilo_galeria.css">
+  </head>
+    
+  <body>      
+    <div id="container">
+		<header>
+			<h1 id="logo"></h1>
+			<nav>
+				<a href="index.html">Biografía</a>
+				<a href="traxectoria.html">Traxectoria</a>
+				<a href="obras.html">Obras</a>
+				<a href="reconhecementos.html">Recoñecementos</a>
+                <a href="#">Galería</a>
+                <a href="libreria/index.html">Revista</a>
+			</nav>
+		</header>
+        
+        <div id="container2">
+            <h2>Galería</h2>
+            <!-- inicio toggle para ver miniaturas -->
+            <div id="toggleContainer">
+                <label>Galería</label>
+                <div id="toggle">
+                    <div id="outer3">
+                        <div id="slider3"></div>
+                    </div>
+                    <label>Mini Galería</label>
+                </div>
+            </div>
+            <!-- fin toggle para ver miniaturas -->
+            <!-- inicio carrusel -->
+
+            <div id="galleryView">
+                <div id="galleryContainer">
+                    <div id="leftView"></div>
+                    <button id="navLeft" class="navBtns"><i class="fas fa-arrow-left fa-3x"></i></button>
+                    <a id="linkTag">
+                        <div id="mainView"></div>
+                    </a>
+                    <div id="rightView"></div>
+                    <button id="navRight" class="navBtns"><i class="fas fa-arrow-right fa-3x"></i></button>
+                </div>
+            </div>
+            <!-- inicio carrusel -->
+            <!-- inicio galeria de miniaturas -->
+
+            <div id="tilesView">
+                <div id="tilesContainer"></div>
+            </div>
+            <!-- inicio galeria de miniaturas -->
+        </div>
+    </div>
+      
+
+      
+ 	<!-- Susi: poñemos o script despois de cargar -->
+ 	
+    <script>
+      document.getElementById("outer3").addEventListener("click", toggleState3);
+
+        function toggleState3() {
+            let galleryView = document.getElementById("galleryView")
+            let tilesView = document.getElementById("tilesView")
+            let outer = document.getElementById("outer3");
+            let slider = document.getElementById("slider3");
+            let tilesContainer = document.getElementById("tilesContainer");
+            if (slider.classList.contains("active")) {
+                slider.classList.remove("active");
+                outer.classList.remove("outerActive");
+                galleryView.style.display = "flex";
+                tilesView.style.display = "none";
+
+                while (tilesContainer.hasChildNodes()) {
+                    tilesContainer.removeChild(tilesContainer.firstChild)
+                }
+            } else {
+                slider.classList.add("active");
+                outer.classList.add("outerActive");
+                galleryView.style.display = "none";
+                tilesView.style.display = "flex";
+
+                for (let i = 0; i <= imgObject.length - 1; i++) { //necesitamos <= para ver a última foto das miniaturas
+                    let tileItem = document.createElement("div");
+                    tileItem.classList.add("tileItem");
+                    tileItem.style.background = "url(" + imgObject[i] + ")";
+                    tileItem.style.backgroundRepeat = "no-repeat"; // susi: imaxe non repetir no background
+                    tileItem.style.backgroundSize = "cover"; // susi: cambio o tamaño para que ocupen background todas igual
+                    tilesContainer.appendChild(tileItem);
+                }
+            };
+        }
+        // susi:hasta aquói as miniaturas
+
+        var imgObject = [
+            "imaxes/xela.jpg",
+            "imaxes/xela1.jpg",
+            "imaxes/xela3.jpg",
+            "imaxes/xela4.jpg",
+            "imaxes/xela5.jpg",
+            "imaxes/xela6.jpg",
+            "imaxes/xela7.jpg",
+            "imaxes/xela8.jpg",
+            "imaxes/xela9.jpg",
+            "imaxes/xela10.jpg",
+            "imaxes/xela11.jpg",
+            "imaxes/xela12.jpg",
+            "imaxes/biblioteca_xela.jpg",
+            "imaxes/letras_galegas.jpg"        ];
+        // susi: cambio let por var
+        var mainImg = 0;
+        var prevImg = imgObject.length - 1;
+        var nextImg = 1;
+
+        // susi: cargamos a galeria
+        function loadGallery() {
+
+            let mainView = document.getElementById("mainView");
+            mainView.style.background = "url(" + imgObject[mainImg] + ")";
+
+            mainView.style.backgroundRepeat = "no-repeat"; // susi: imaxe non repetir no background
+            mainView.style.backgroundSize = "cover"; // susi: cambio o tamaño para que ocupen background todas igual
+
+
+            let leftView = document.getElementById("leftView");
+            leftView.style.background = "url(" + imgObject[prevImg] + ")";
+
+            leftView.style.backgroundRepeat = "no-repeat"; // susi: imaxe non repetir no background
+            leftView.style.backgroundSize = "cover"; // susi: cambio o tamaño para que ocupen background todas igual
+
+
+            let rightView = document.getElementById("rightView");
+            rightView.style.background = "url(" + imgObject[nextImg] + ")";
+
+            rightView.style.backgroundRepeat = "no-repeat"; // susi: imaxe non repetir no background
+            rightView.style.backgroundSize = "cover"; // susi: cambio o tamaño para que ocupen background todas igual
+
+
+            let linkTag = document.getElementById("linkTag")
+            linkTag.href = imgObject[mainImg];
+
+        };
+
+        function scrollRight() {
+
+            prevImg = mainImg;
+            mainImg = nextImg;
+            if (nextImg >= (imgObject.length - 1)) {
+                nextImg = 0;
+            } else {
+                nextImg++;
+            };
+            loadGallery();
+        };
+
+        function scrollLeft() {
+            nextImg = mainImg
+            mainImg = prevImg;
+
+            if (prevImg === 0) {
+                prevImg = imgObject.length - 1;
+            } else {
+                prevImg--;
+            };
+            loadGallery();
+        };
+
+        document.getElementById("navRight").addEventListener("click", scrollRight);
+        document.getElementById("navLeft").addEventListener("click", scrollLeft);
+        document.getElementById("rightView").addEventListener("click", scrollRight);
+        document.getElementById("leftView").addEventListener("click", scrollLeft);
+        document.addEventListener('keyup', function (e) {
+            if (e.keyCode === 37) {
+                scrollLeft();
+            } else if (e.keyCode === 39) {
+                scrollRight();
+            }
+        });
+
+        loadGallery();
+
+    </script>
+  <footer>&copy;2021</footer>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+/* Basic sample */
+
+body{
+	background-color:#ccc;
+    height: auto;
+	margin:0;
+	padding:0;
+/*    border: 1px solid green;*/
+}
+
+.flipbook-viewport{
+	width:20%;
+	height:100%;
+/*    border: 1px solid blue;*/
+}
+
+.flipbook-viewport .container{
+	position:relative;
+	top:0%;
+	left:50%;
+	margin:0;
+    margin-bottom: 2em;
+    margin-top: 1em;
+/*    border: 1px solid orange;*/
+}
+
+.flipbook-viewport .flipbook{
+	width:700px;
+/*	height:600px;*/
+    position: relative;
+/*	left:-461px;*/
+    left: -80px;
+	top:00vh;
+    margin: 0;
+/*    border: 1px solid black;*/
+}
+
+.flipbook-viewport .page{
+	width:350px;
+/*	height:600px;*/
+	background-color:white;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+/*    border: 1px solid red;*/
+}
+
+.flipbook .page{
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+.flipbook-viewport .page img{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin:0;
+}
+
+.flipbook-viewport .shadow{
+	-webkit-transition: -webkit-box-shadow 0.5s;
+	-moz-transition: -moz-box-shadow 0.5s;
+	-o-transition: -webkit-box-shadow 0.5s;
+	-ms-transition: -ms-box-shadow 0.5s;
+
+	-webkit-box-shadow:0 0 20px #ccc;
+	-moz-box-shadow:0 0 20px #ccc;
+	-o-box-shadow:0 0 20px #ccc;
+	-ms-box-shadow:0 0 20px #ccc;
+	box-shadow:0 0 20px #ccc;
+}
