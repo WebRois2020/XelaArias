@@ -1,0 +1,79 @@
+
+
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<script type="text/javascript" src="extra1/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="extra1/modernizr.2.5.3.min.js"></script>
+</head>
+<body>
+
+<div class="flipbook-viewport">
+	<div class="container">
+		<div class="flipbook">
+			<div style="background-image:url(paginas/portada24.png)"></div>
+			<div style="background-image:url(paginas/1.2.png)"></div>
+			<div style="background-image:url(paginas/biografia_3_BN.png)"></div>
+			<div style="background-image:url(paginas/DESNUDO_2.png)"></div>
+			<div style="background-image:url(paginas/poema33.png)"></div>
+			<div style="background-image:url(imaxes/xela2.jpg)"></div>
+			<div style="background-image:url(paginas/poema56.png)"></div>
+			<div style="background-image:url(imaxes/xela9.jpeg)"></div>
+			<div style="background-image:url(paginas/poema5.png)"></div>
+			<div style="background-image:url(imaxes/foto2.jpg)"></div>
+			<div style="background-image:url(paginas/dario_diario.png)"></div>
+			<div style="background-image:url(paginas/final.png)"></div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+function loadApp() {
+
+	// Create the flipbook
+
+	$('.flipbook').turn({
+			// Width
+
+			width:922,
+			
+			// Height
+
+			height:600,
+
+			// Elevation
+
+			elevation: 50,
+			
+			// Enable gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true
+
+	});
+}
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['libr1/turn.js'],
+	nope: ['libr1/turn.html4.min.js'],
+	both: ['css/basic.css'],
+	complete: loadApp
+});
+
+</script>
+
+</body>
+</html>
