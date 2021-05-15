@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obras</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+:root {
+  text-align: center;
+}
+html,body{background-color:#8f000a;}
+
+.nav {
+  appearance: none;
+  opacity: 0;
+  z-index:-1;
+  position: relative;
+  z-index: 999;
+  outline: 0;
+}
+
+section {
+
+	background-image: 
+   box-shadow: 0 0 0 .2em #999; 
+  font-family: sans-serif;
+  display: grid;
+  place-content: center;
+  background-color:white; 
+  font-size: 5vw; 
+  font-weight:800;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex: middle;
+   opacity:0;
+ transform: scale(.6) translate(0%,0);
+}
+
+
+ 
+.n1:not(:checked) ~ .s1,
+.n2:not(:checked) ~ .s2,
+.n3:not(:checked) ~ .s3,
+.n4:not(:checked) ~ .s4,
+.n5:not(:checked) ~ .s5,
+.n6:not(:checked) ~ .s6,
+.n7:not(:checked) ~ .s7,
+.n8:not(:checked) ~ .s8 {  animation: bye 1s ease-in-out forwards}
+
+@keyframes bye{
+  0%{opacity:0; background-color:white; z-index:7;}
+  10%{opacity:1}
+  50%{transform:scale(.6) rotate(2deg) translate(5%,0);z-index:8}
+  100%{transform:scale(.6) translate(0%,0); opacity:1; z-index:5;}
+}
+
+
+@keyframes hello{
+  0%{opacity:1; background-color:white; z-index:7;}
+  50%{transform:scale(.6)   translate(-30%,-20%) rotate(-10deg)  translate(-60%,0);}
+  100%{transform:scale(.6) translate(0%,0); opacity:1; z-index:9}
+}
+
+.n1:checked ~ .s1,
+.n2:checked ~ .s2,
+.n3:checked ~ .s3,
+.n4:checked ~ .s4,
+.n5:checked ~ .s5,
+.n6:checked ~ .s6,
+.n7:checked ~ .s7,
+.n8:checked ~ .s8 {
+  background-color: #fff;
+  z-index: 1;
+  transform:  scale(.6) translate(0%,0);
+   animation: hello 1s ease-in-out forwards
+}
+
+@keyframes hereiam {
+ 
+  100% {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+    transform: none;
+  }
+}
+.boton{
+  margin-top: 1em;
+  color:white;
+  padding:4em;
+  font-size: 1.4em;
+  font-variant: small-caps;
+  font-weight: bold;
+  text-decoration: none;
+}
+ 
+
+</style>
+<script>
+function checknext() {
+  if (document.querySelector(".last:checked")) {
+    document.querySelector(".first").checked = true;
+  } else {
+    document.querySelector(".nav:checked").nextElementSibling.checked = true;
+  }
+}
+
+setInterval(function () {
+  checknext();
+}, 3000);
+
+</script>
+<body>
+	 
+     <a class="boton" href="index_noelia.html">Inicio</a>
+     <a  class="boton" href="biografia.html">Biografia</a>
+     <a  class="boton" target="_blank" href="obras.html"> Obras</a>
+     <a  class="boton" href="galeria.html"> Galería</a>
+     <a  class="boton" target="_blank" href="https://academia.gal/letras-galegas/2021/xela-arias/videos"> Videos</a>
+       
+ 
+<input class="n1 nav first" name="nav" type="radio"  />
+<input class="n2 nav" name="nav" type="radio" checked  />
+<input class="n3 nav" name="nav" type="radio"  />
+<input class="n4 nav" name="nav" type="radio"  />
+<input class="n5 nav" name="nav" type="radio"  />
+<input class="n6 nav" name="nav" type="radio"  />
+<input class="n7 nav" name="nav" type="radio"  />
+<input class="n8 nav last" name="nav" type="radio"  />
+
+<section class="s1">OBRAS XELA</section>
+<section class="s2">Denuncia do equilibrio (1986)</section>
+<section class="s3">Lili sen pistolas (1986)</section>
+<section class="s4">Tigres coma cabalos (1990)</section>
+<section class="s5">Darío a diario (1996)</section>
+<section class="s6">Intempériome (xullo de 2003)</section>
+
+<section class="s7">Maldito lindo (obra inédita).</section>
+<section class="s8">Poesía reunida (1982-2004)</section>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<!-- Esta plantilla es de codepen.io/ tree labels for each input -->
+ <html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700|Great+Vibes);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+*, *:after, *:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+* {margin:0;padding:0;border: 0 none;position: relative;}
+[class*="entypo-"]:before {font-family: 'entypo', sans-serif; display: inline-block; margin-right: .5rem;}
+
+html, body  {
+  background: white;
+  width: 100%;
+  height: 100%;
+  font-family: lato;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+body {display: flex;}
+body > div {
+  margin: auto;
+}
+/*h1, h1 a {
+  font-size: 6vw;
+  font-weight: 300;
+  color: #00262F;
+  text-align: center;
+  text-decoration: none;
+}
+h1 a:hover {color: #0D757D;}*/
+body > p {
+  color: #00262F;
+  font-size: 3vw;
+  text-align: center;
+
+}
+.galeria {
+  margin: 2vh auto 0;
+  width: 80vw;
+  transform-style: preserve-3d;
+}
+.galeria:before {
+  content: '';
+  padding-top: 56.25%;
+  display: inline-block;
+  width: 0;
+}
+.card {
+  background-size: 2px 2px, cover;
+  background-repeat: repeat, none;
+  background-position: 0 0;
+  width: 85%;
+  height: 85%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 2rem rgba(0,0,0,.5);
+  border-radius: 3px;
+  font-family: 'Great Vibes';
+}
+.una {
+  background: #8f000a;
+}
+.dos {
+   background: #8f000a;
+
+}
+.tres {
+
+   background: #8f000a;
+}
+/*h2 {
+  color: #fff;
+  font-family: lato;
+  text-align: center;
+  font-size: 6vh;
+  font-weight: 300;
+  line-height: 8vh;
+  background: #FF7361;
+  box-shadow: 0 0 5px rgba(0,0,0,.7);
+}
+h2:before {
+  position: absolute;
+  left: 1rem;
+  font-weight: 300;
+  color: #00262F;
+}*/
+.card p {
+  text-align: center;
+  color: #fff;
+  font-size: 3vw;
+  line-height: 1.3em;
+  text-shadow: -1px -1px 0 #0D757D, 1px 1px 0 #000;
+  margin-top: 3vh;
+}
+
+h3 {
+  letter-spacing: 0.1em;
+  padding:0.3em;
+  color:white;
+  font-size: 5vw;
+  font-weight: 700;
+  margin: 1vh 0 1vh;
+}
+.footer {
+  background: #15BFCC;
+  color: #0D757D;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  list-style-type: none;
+  border-top: 3px solid rgba(255,255,255,.3);
+}
+#uno:checked ~ .una .footer,
+#dole:checked ~ .dos .footer,
+#tele:checked ~ .tres .footer {
+  background: #8f000a;
+  color: #8f000a;
+}
+li {
+  color:white;
+  font-size: 3em;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+li:before {  
+  font-size: 4vh;
+  line-height: 8vh;
+}
+input {visibility: hidden;}
+label {
+  background: #8f000a;
+  position: absolute;
+  top: 0; bottom: 0;
+  margin: auto 0;
+  color: #fff;
+  font-size: 4vw;
+  line-height: 15vh; 
+  text-align: right;
+  height: 15vh;
+  width: 4vw;
+  padding: 0 .5vw;
+  cursor: pointer;
+  opacity: .2;
+  transition: .5s linear;
+}
+.otra + .otra,
+#uno:checked ~ .tres .afin,
+#dole:checked ~ .una .afin,
+#tele:checked ~ .dos .afin, 
+#catole:checked ~ .cuatro .afin  {
+  right: 0;
+  text-align: left;
+}
+#uno:checked ~ .una .otra,
+#dole:checked ~ .dos .otra,
+#tele:checked ~ .tres .otra
+#catole:checked ~ .cuatro .otra {
+  background:  #8f000a;
+  display: block;
+}
+#uno:checked ~ .una .afin,
+#dole:checked ~ .dos .afin,
+#tele:checked ~ .tres .afin,
+#catole:checked ~ .cuatro .afin
+:not(:checked) ~ .otra
+{display: none;}
+
+.card:hover label {
+  animation: pulso 1s infinite alternate;
+}
+.card:hover label + label {
+  animation-delay: .5s;
+}
+.card:hover label:hover {
+  animation: none;
+  opacity: .8;
+  width: 10vw;
+  font-size: 10vw;
+}
+
+#uno:checked ~ .dos,
+#dole:checked ~ .tres,
+#tele:checked ~ .cuatro,
+#catole:checked ~ .una{
+
+  animation: 1s fuera-izq;
+  animation-fill-mode: forwards;
+  transform-origin: center left;
+  z-index: 2;
+}
+#uno:checked ~ .cuatro,
+#dole:checked ~ .una,
+#tele:checked ~ .dos,
+#catole:checked ~ .una {
+
+  animation: 1.5s fuera-dch;
+  animation-fill-mode: forwards;
+  transform-origin: center right;
+  z-index: 2;
+}
+#uno:checked ~ .una,
+#dole:checked ~ .dos,
+#tele:checked ~ .tres,
+#catole:checked ~ .cuatro {
+  animation: 2s central;
+  animation-fill-mode: forwards;
+  transform-origin: center center;
+  z-index:3;
+}
+
+@keyframes fuera-izq {
+  0% {transform: scale(1) translatex(0%);} 
+  70% {transform: scale(.9) translatex(-100%);}
+  100% {transform: scale(.9) translatex(-7%);}
+}
+@keyframes fuera-dch {
+  0% {transform: scale(1) translatex(0%);}
+  70% {transform: scale(.9) translatex(100%);}
+  100% {transform: scale(.9) translatex(7%);}
+}
+@keyframes central {
+  0% {transform: scale(.8);z-index: 1;}
+  80% {transform: scale(.5);z-index: 3;}
+  100% {transform: scale(1);z-index: 3;}
+}
+@keyframes pulso {
+  50% {opacity: .7;}
+}
+
+.boton{
+  display: inline-block;
+  color:#8f000a;
+  padding:1.8em;
+  font-size: 1.4em;
+  font-variant: small-caps;
+  font-weight: bold;
+  text-decoration: none;
+}
+.boton:hover{
+ display: inline-block;
+  color:#8f000a;
+  padding:1.8em;
+  font-size: 1.4em;
+  font-variant: small-caps;
+  font-weight: bold;
+  text-decoration: underline;
+ 
+}
+
+
+.xela{
+font-size: 1.4em;
+ }
+ .xela_2{
+  line-height: 2em;
+
+ }
+  </style>
+</head>
+<body>
+<nav>
+     <a class="boton" href="index_noelia.html">Inicio</a>
+     <a  class="boton" href="biografia.html">Biografia</a>
+     <a  class="boton"  href="obras_final.html"> Obras</a>
+     <a  class="boton" href="galeria.html"> Galería</a>
+     <a  class="boton" target="_blank" href="https://academia.gal/letras-galegas/2021/xela-arias/videos"> Videos</a>
+ </nav>
+<div>
+<section class='galeria'>
+
+  <input type="radio" id="uno" value="1" name="tractor" checked='checked' />    
+  <input type="radio" id="dole" value="2" name="tractor" />      
+  <input type="radio" id="tele" value="3" name="tractor" />
+
+<!-- inicio card1 -->
+  <article class='card una'>
+
+    
+      <h3> Obras de Xela Arias</h3>
+        <p>Denuncia do equilibrio (1986)</p>
+        <p>Lili sen pistolas (1986)</p>
+        <p>Tigres coma cabalos (1990)</p>
+        <p>Darío a diario (1996)</p>
+        <p>Intempériome (2003)</p>
+         
+   
+    <label for='dole' class='entypo-left-bold otra'></label>
+    <label for='tele' class='entypo-right-bold otra'></label>
+    <label for='uno' class='entypo-arrows-ccw afin'></label> 
+
+  </article>
+
+  <!-- inicio card 2 -->
+
+  <article class='card dos'>
+     <div>
+      <p class="xela">(...) Unha copa. un fresco o cine.<br>
+      Un cigarro alabarado,
+    os pés na area.</p>
+    <p>
+      Parece que perdura sabéreste así queda,<br>
+
+      e asúme-la bendita expresión.</p>
+
+      <p>Mata-lo tempo.</p>
+      <p>O tempo…
+  
+     ¡que se perda!</p>
+  
+      <p>maino, diante nosa. (...)</p>
+    
+
+    <label for='tele' class='entypo-left-bold otra'></label>
+    <label for='uno' class='entypo-right-bold otra'></label>
+    <label for='dole' class='entypo-arrows-ccw afin'></label>  
+
+  </article>
+
+  <!-- inicio card 3 -->
+
+  <article class='card tres'>
+  
+    <p><span class="xela_2">(...)
+ Onde cantan os poetas<br>
+A nos lembra-lo que non foi<br>
+Ou puido ser,<br>
+
+Vese na dor inmóvil, imposible, invariable<br>
+Medida do silencio que resta. (...)</p>
+
+    <label for='uno' class='entypo-left-bold otra'></label>
+    <label for='dole' class='entypo-right-bold otra'></label>
+    <label for='tele' class='entypo-arrows-ccw afin'></label>  
+  </article>
+  <!-- inicio card 4 -->
+<!-- 
+<article class="cuatro">
+  
+  <h2> OBRAS XELA</h2>
+  
+    <p> prueba noelia  </p>
+
+    <label for='dole' class='entypo-left-bold otra'></label>
+    <label for='catole' class='entypo-right-bold otra'></label>
+    <label for='uno' class='entypo-arrows-ccw afin'></label> 
+
+  </article> -->
+
+</section>
+</div>
+</body>
+</html>

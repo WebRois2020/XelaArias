@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Biografia</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	@import 'https://fonts.googleapis.com/css?family=Raleway:300,400';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,300';
+@import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	color: #181818;
+}
+
+header {
+	background-image: url("img/xela2.jpg");
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 70vh;
+}
+
+
+#efecto {
+
+	height: 100vh;
+	background: radial-gradient(circle, rgba(185,185,185,0.2),  rgba(40,40,40, 0.6));
+	text-align: center;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center
+}
+
+header h1, header h3, header h4 {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+header h1 {
+	font-size: 3em;
+	letter-spacing: 0.13em;
+	padding-bottom: 0.21em;
+
+}
+
+header h3 {
+	font-weight: 300;
+	font-size: 1.5em;
+	letter-spacing: 0.15em;
+}
+
+header h4 {
+	font-weight: 300;
+	font-size: 1.3em;
+	letter-spacing: 0.2em;
+}
+
+header i {
+	text-align: center;
+	position: absolute;
+	bottom: 1%;
+	left: 50%;
+	color: #FFF;
+	animation: 1.5s bounce infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-20px);}
+    60% {transform: translateY(-10px);}
+} 
+
+#efecto div {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1em;
+	border-top: 3px solid white;
+	border-bottom: 3px solid white;
+	margin-top: -5vh;
+}
+
+#contenido {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-align: center;
+	    align-items: center;
+	margin: auto;
+	color: #242424;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+#about {
+	padding: 1em;
+	background-color: #F2F2F2;
+	position: relative;
+}
+
+#about:after {
+	content: '';
+	display: block;  
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 0;
+	height: 0;
+	border-top: 33px solid #F2F2F2;
+	border-right: 50vw solid transparent;
+	border-bottom: 0 solid transparent;
+	border-left: 50vw solid transparent;
+}
+
+.seccion {
+	text-align: center;
+	font-size: 4em;
+	margin: auto;
+	margin-top: 0.5em;
+	margin-bottom: 0.4em;
+	color: #8F000A;
+}
+
+#about p {
+	margin: 0 10vw;
+	font-size: 1.1em;
+	letter-spacing: 0.1em;
+	line-height: 1.5em;
+}
+
+b {
+	font-weight: 600;
+	color: #8F000A;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+}
+
+i {
+	color: #303030;
+}
+
+#cita {
+	padding: 60px 0;
+	background-color: #8F000A;
+	width: 100%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	color: #F2F2F2;
+}
+
+#cita i {
+	color: #F2F2F2;
+	font-size: 3em;
+	padding-right: 10px;
+}
+
+#cita p {
+	font-size: 1.3em;
+	padding-left: 10px;
+	border-left: 2px solid #F2F2F2;
+	font-weight: 300;
+}
+
+#contenidoCita {
+	max-width: 60vw;
+}
+
+#contenedorTimeline {
+	background-color: #F2F2F2;
+	width: 80%;
+	position: relative;
+}
+
+#contenedorTimeline:after {
+	content: '';
+	display: block;  
+	position: absolute;
+	left: 0;
+	bottom: 100%;
+	width: 0;
+	height: 0;
+	border-bottom: 33px solid #F2F2F2;
+	border-right: 50vw solid transparent;
+	border-top: 0 solid transparent;
+	border-left: 50vw solid transparent;
+}
+
+/* 
+ * --  Timeline --
+ * Basado en: https://codepen.io/itbruno/pen/KwarLp
+ */
+.timelineItem:after, .timelineItem:before {
+	content: '';
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
+#timeline {
+	width: 100%;
+	margin: 30px auto;
+	position: relative;
+	padding: 0 10px;
+}
+
+#timeline:before {
+	content: '';
+	width: 3px;
+	height: 100%;
+	background: #8F000A;
+	left: 50%;
+	top: 0;
+	position: absolute;
+}
+
+#timeline:after {
+	content: '':
+	;clear:; both;
+	display: table;
+	width: 100%;
+}
+
+.timelineItem {
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.timelineIcon {
+	background: #8F000A;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	overflow: hidden;
+	margin-left: -23px;
+	border-radius: 50%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+}
+
+.timelineIcon i {
+	font-size: 25px;
+	color: white;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.timelineContent {
+	width: 45%;
+	background: #FFFFFF;
+	padding: 20px;
+	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+
+.timelineContent h2 {
+	padding: 15px;
+	background: #8F000A;
+	color: #FFF;
+	margin: -20px -20px 0 -20px;
+	border-radius: 3px 3px 0 0;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.timelineContent h3 {
+	font-weight: 300;
+	color: #434343;
+	padding: 8px 0;
+	font-size: 1em;
+}
+
+.timelineContent div {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+}
+
+.timelineContent img {
+	width: 60%;
+	height: auto !important;
+	max-height: 200px;
+	padding: .5em;
+	object-fit: contain;
+}
+
+.timelineContent p {
+	line-height: 1.45em;
+}
+
+.timelineContent:before {
+	content: '';
+	position: absolute;
+	left: 45%;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+	border-left: 7px solid #8F000A;
+}
+
+.timelineContent.right {
+	float: right;
+}
+
+.timelineContent.right:before {
+	content: '';
+	right: 45%;
+	left: inherit;
+	border-left: 0;
+	border-right: 7px solid #8F000A;
+}
+
+@media (max-width: 768px) {
+	#timeline {
+		margin: 30px;
+		padding: 0;
+		width: 90%;
+	}
+	#timeline:before {
+		left: 0;
+	}
+	.timelineContent {
+		width: 90%;
+		float: right;
+	}
+	.timelineContent:before, .timelineContent.right:before {
+		left: 10%;
+		margin-left: -6px;
+		border-left: 0;
+		border-right: 7px solid #8F000A;
+	}
+	.timelineIcon {
+		left: 0;
+	}
+	.timelineContent div {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-align: center;
+		    align-items: center;
+		-ms-flex-pack: center;
+		    justify-content: center;
+		-ms-flex-direction: column;
+		    flex-direction: column;
+	}
+	.timelineContent img {
+		width: 80%;
+		height: auto !important;
+		display: block;
+		padding: .5em;
+	}
+}
+/*
+#borde {
+	display: block;
+	left: 0;
+	bottom: 100%;
+	width: 0;
+	height: 0;
+	border-top: 33px solid #F2F2F2;
+	border-right: 50vw solid transparent;
+	border-bottom: 0 solid transparent;
+	border-left: 50vw solid transparent;
+	z-index: 3;
+}*/
+
+#miiverse {
+	background-color: #8F000A;
+	width: 100%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	position: relative;
+	margin-top: -33px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: #F2F2F2;
+}
+
+#miiverse p {
+	font-size: 1.3em;
+	padding-left: 10px;
+	border-left: 2px solid #F2F2F2;
+	font-weight: 300;
+}
+
+#contenidoMiiverse {
+	padding-right: 10px; 
+}
+/*
+footer {
+	background-color: #420005;
+	width: 100%;
+	position: relative;
+	color: #F2F2F2;
+	text-align: center;
+	padding-bottom: 1.7em;
+}
+
+footer:before {
+	content: '';
+	display: block;  
+	position: absolute;
+	left: 0;
+	bottom: 100%;
+	width: 0;
+	height: 0;
+	border-bottom: 33px solid #420005;
+	border-right: 50vw solid transparent;
+	border-top: 0 solid transparent;
+	border-left: 50vw solid transparent;
+}
+
+footer h1 {
+	padding: 0.3em 0.7em;
+	font-weight: 300;
+	font-size: 2.5em;
+}
+
+footer h2 {
+	text-align: center;
+	padding: 0.1em 0.7em;
+	font-weight: 300;
+	font-size: 1.5em;
+}
+
+footer a {
+	color: #F2F2F2;
+}
+
+footer a:hover {
+	color: #F48484;
+	transition: 0.3s ease;
+}
+
+footer p {
+	font-size: 0.8em;
+	padding-top: 0.6em;
+}*/
+.boton{
+  color:#8f000a;
+  padding:4em;
+  font-size: 1.4em;
+  font-variant: small-caps;
+  font-weight: bold;
+ text-decoration: none;
+
+}
+.boton:hover{
+  color:#8f000a;
+  padding:4em;
+  font-size: 1.4em;
+  font-variant: small-caps;
+  font-weight: bold;
+ text-decoration: underline;
+
+}
+
+.pie{
+	color:white;
+	font-variant: small-caps;
+	font-weight: bolder;
+}
+
+.xela:hover{
+
+	transform: translate(10%, 45%)scale(2);
+	-webkit-transform: translate(10%, 45%) scale(2);
+	/** Safari & Chrome **/
+	-o-transform: translate(10%, 45%) scale(2);
+	/** Opera **/
+	-moz-transform: translate(10%, 45%) scale(2);
+	/** Firefox **/
+	box-shadow: 5px 5px 10px #666;
+	z-index: 99999999;
+	background-color: white;
+	border:none;
+}
+
+</style>
+<script type="text/javascript">
+	/*
+FreeCodeCamp tribute page.
+
+Timeline: https://codepen.io/itbruno/pen/KwarLp
+Info: http://www.polygon.com/features/2015/7/13/8940557/satoru-iwata-accomplishments-timeline-biography-life
+*/
+</script>
+</head>
+<body>
+
+<div id="contenedor">
+	<header>
+		<div id="efecto">
+			<div>
+				<h1>XELA ARIAS</h1>
+				<h4>1962-2003</h4>
+			</div>
+			<i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+		</div>
+	</header>
+	<nav>
+     <a class="boton" href="index_noelia.html">Inicio</a>
+     <a  class="boton" href="biografia.html">Biografia</a>
+         <a  class="boton" href="obras_final.html"> Obras</a>
+           <a  class="boton" href="galeria.html"> Galería</a>
+        <a  class="boton" target="_blank" href="https://academia.gal/letras-galegas/2021/xela-arias/videos"> Videos</a>
+       
+  </nav>
+	<div id="contenido">
+		<div id="about">
+
+			<h2 class="seccion">Aquela nena de Sarria...</h2>
+			<p>Foi, ao nacer,<b>María de los Ángeles</b>, sería despois <b>María dos Anxos</b>, en <b>1984</b> cambia o nome polo seu equivalente en galego, e acabaría sendo o que ela era,<b> Xela</b>, en <b>1995</b>. A escolla do nome propio e a perseveranza no tempo para que así constase oficialmente, evidencian o alto grao de conciencia idiomática, á que contribuíu o ambiente familiar que nutriu desde os primeiros anos a súa estima da lingua.</p>
+		</div>
+		
+		<div id="cita">
+			
+			<i class="fa fa-quote-left" aria-hidden="true"></i>
+			<div id="contenidoCita">
+				<p>"Escribo en galego porque estou aquí e, desde logo,<br> Galicia pertence, aínda, aos derrotados"
+			</div>
+
+
+			
+		</div>
+		<!-- Fuente: http://www.polygon.com/features/2015/7/13/8940557/satoru-iwata-accomplishments-timeline-biography-life -->
+		<div id="contenedorTimeline">
+			<h2 class="seccion"></h2>
+			<div id="timeline">
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<i class="fa fa-hospital-o"></i>
+					</div>
+					<div class="timelineContent">
+						<h2>Nacemento</h2>
+						<h3><b>1962</b></h3>
+						<div>
+							<p>Nada en <b>Sarria</b> o <b>4 de marzo de 1962</b>,filla de <b>Valentín Arias López</b> e <b>Amparo Castaño López</b>,é a maior de cinco irmáns</p>
+								<img class="xela" src="img/xela-arias-21013.jpg">
+						</div>
+					</div>
+				</div>
+
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<i class="fa fa-graduation-cap"></i>
+					</div>
+					<div class="timelineContent right">
+						<h2>Granxa de barreiros</h2>
+						<h3><b>1965</b></h3>
+						<div>
+							<img class="xela" src="img/xela_granxa.jpg">
+							<p>Os tres primeiros anos de vida decorren na contorna da <b>Granxa de Barreiros</b>, e o 
+							<b>Colexio Fingoi de Lugo</b>, no que inicia Xela Arias estudos de primaria</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<i class="fa fa-gamepad"></i>
+					</div>
+					<div class="timelineContent">
+						<h2>Cambio de vida ..Vigo</h2>
+						<h3><b>1969</b></h3>
+						<div>
+							<p>A familia trasládase a <b>Vigo</b>, cidade decisiva na biografía e na obra dunha<b> “nena de barrio e vida proletaria”</b>, nas súas palabras.Completa ensino primario na <b>Escola Nacional Graduada de Sárdoma en Moledo</b> onde o seu pai exerce como mestre.</p>
+							<img class="xela" src="img/xela_nena.jpg">
+						</div>
+					</div>
+				</div>
+
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<i class="fa fa-gamepad"></i>
+					</div>
+					<div class="timelineContent right">
+						<h2>Estudos e traballo</h2>
+						<h3><b>1976 — 1979</b></h3>
+						<div><img class="xela" src="img/nova.jpg">
+							<p> En <b>1976</b> ingresou no <b>Instituto Castelao</b> do barrio do Calvario . Facendo o COU abandonou os estudos, e comezou a traballar en <b>Edicións Xerais de Galicia</b>, desde o seu nacemento en <b>1979</b>, canda Xulián Maure Rivas e Roberto Pérez Pardo,como oficinista.</p>
+							
+								
+						</div>
+					</div>
+				</div>
+
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<i class="fa fa-briefcase"></i>
+					</div>
+					<div class="timelineContent">
+						<h2>Publicacións en xornais e revistas</h2>
+						<h3><b>1980</b></h3>
+						<div>
+							
+							<p>Publicou en xornais e revistas coma <b>A Nosa Terra, Diario 16 de Galicia, Faro de Vigo, Jornal de Notícias do Porto, Dorna, Tintimán, Carel ou Katarsis</b>, colaborou en publicacións coma Festa da Palabra Silenciada, Luzes de Galiza ou Boletín Galego de Literatura e formou parte do consello de redacción de Viceversa, revista galega de tradución.</p><img class="xela" src="img/xela_revista.jpg">
+						</div>
+					</div>
+				</div>
+
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<i class="fa fa-gamepad"></i>
+					</div>
+					<div class="timelineContent right">
+						<h2>Entra na asociación de escritores</h2>
+						<h3><b>1986</b></h3>
+						<div>
+							<img class="xela" src="img/xela_arias.jpg">
+							<p>En <b>1986</b> ingresou na <b>Asociación de Escritores en Lingua Galega</b>. En <b>1991</b> rexistrou as letras para o grupo musical <b>Desertores</b> e retomou os estudos, iniciando <b>Filoloxía Hispánica na Universidade de Vigo</b>, licenciándose en <b>1996</b> pola <b>Universidade de Santiago de Compostela</b>,e iniciando a especialidade en galego-portugués.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<i class="fa fa-user-plus"></i>
+					</div>
+					<div class="timelineContent">
+						<h2>Comparte a súa vida</h2>
+						<h3><b>1992</b></h3>
+						<div>
+							
+							<p>No verán de <b>1992</b> casou co fotógrafo e matemático ourensán, residente en Vigo, <b>Xulio Gil Rodríguez (1954)</b>, con quen en <b>1994</b> tivo o seu único fillo, <b>Darío</b>; separáronse no ano <b>2002</b>.</p><img class="xela" src="img/dario.jpg">
+						</div>
+					</div>
+				</div>
+
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<i class="fa fa-briefcase"></i>
+					</div>
+					<div class="timelineContent right">
+						<h2>Profesora</h2>
+						<h3><b>1999</b></h3>
+						<div>
+							<img class="xela" src="img/xela_chica.jpg">
+							<p>No curso <b>1999-2000</b>comezou a exercer como profesora substituta de ensino secundario, de lingua e literatura castelá, nos institutos Terra de Xallas (Santa Comba), Paralaia (Moaña), Valle-Inclán (Pontevedra), Xelmirez II (Santiago de Compostela) e Valadares II (Vigo). En anos seguintes foi docente en Chapela (Redondela), A Sangriña (A Guarda) e Álvaro Cunqueiro (Vigo).</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<i class="fa fa-gamepad"></i>
+					</div>
+					<div class="timelineContent">
+						<h2>A súa fin</h2>
+						<h3><b>2003</b></h3>
+						<div>
+							<img class="xela" src="img/unnamed.jpg">
+							<p>En novembro do ano <b>2003 Arias finou</b> dun ataque ao corazón nun <b>hospital de Vigo</b>, con corenta e un anos de idade.Foi <b>soterrada</b> no <b>cemiterio vigués de Pereiró</b>.</p> 
+						</div>
+					</div>
+				</div>
+
+		
+		<div id="miiverse">
+			
+			<div id="contenidoMiiverse">
+				<p>"Tan intensas e punxentes como as súas arelas de liberdade, independencia e xustiza,<br> 
+				eran nela o sentido e mais a práctica da solidariedade."</p>
+			<br>
+
+			<a class="pie"  href="https://gl.wikipedia.org/wiki/Xela_Arias">Máis Xela+</a>
+		</div>
+	</div>
+</div>
+        </div>
+    </div>
+    </div>
+    
+</body>
+</html>
