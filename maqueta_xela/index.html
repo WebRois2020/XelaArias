@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Xela Arias</title>
+	<meta name="description" content="Páxina sobre Xela Arias">
+	<meta name="author" content="Lorena Carlés">
+	<!-- Basic Page Needs
+	================================================== -->
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<!-- Le fav and touch icons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<!-- Scripts -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script>$('#myModal').modal()</script>
+	<script src="js/formvalidation.js"></script>
+	<script src="js/html5placeholder.jquery.js"></script>
+	<script src="js/jquery.tweet.js"></script>
+	
+	<!-- <script type="text/javascript">
+		alert("Estás entrando nunha Web sobre Xela Arias");
+
+	</script> -->
+</head>
+<body>
+<!-- PRUEBA CON JAVASCRIPT -->
+ <!-- Top Green Bar -->
+<div class="topline">
+</div>
+<!-- Top Green Bar Ends-->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</a>
+			<div class="nav-collapse collapse">
+				<!-- Menu Links
+			================================================== -->
+				<!-- Left menu links -->
+				<ul class="nav leftmenu">
+					<li><a href="about.html">Vida</a></li>
+					<!-- <li><a href="portofolio.html">Obra</a></li> -->
+				</ul>
+				<!-- Right menu links -->
+				<ul class="nav rightmenu">
+					<li><a href="portofolio.html">Obra</a></li> 
+					<!-- <li class="lastmenu"><a href="#" class="lastmenu">Archivos</a></li> -->
+				</ul>
+				<!-- End Menu Links
+			================================================== -->
+				<!-- Pop up form (activated on "hire me" click)-->
+				<div id="myModal" class="modal hide fade hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+						<h3 id="myModalLabel">Enviame os teus comentarios</h3>
+					</div>
+					<div class="modal-body">
+						<div class="done">
+							<div class="alert alert-success">
+								<button type="button" class="close" data-dismiss="alert">x</button>
+								<strong>A túa mensaxe enviouse correctamente</strong><br/>
+							</div>
+						</div>
+						<div class="form">
+							<form method="post" action="process.php" id="contactform">
+								<table>
+								<tbody>
+								<tr class="element">
+									<td class="noborder">
+									</td>
+									<td class="noborder">
+										<input type="text" name="name" class="text input-xlarge" placeholder="Nome">
+									</td>
+								</tr>
+								<tr class="element">
+									<td class="noborder">
+									</td>
+									<td class="noborder">
+										<input type="text" name="email" class="text input-xlarge" placeholder="dirección de e-mail">
+									</td>
+								</tr>
+								<tr class="element texttop">
+									<td class="noborder">
+									</td>
+									<td class="noborder">
+										<textarea name="comment" class="text textarea input-xlarge contactarea" placeholder="Escribe aquí os teus comentarios"></textarea>
+									</td>
+								</tr>
+								<tr class="element">
+									<td class="noborder">
+										 &nbsp;
+									</td>
+									<td class="noborder">
+										<input type="submit" id="submit" class="btn" value="Enviar">
+										<div class="loading">
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal">Pechar</button>
+					</div>
+				</div>
+				<!-- End pop up content modal (activated on "hire me" click)-->
+			</div>
+			<!-- Menu Ends
+			================================================== -->
+			<!-- Logo-->
+			<a class="brand logo" href="index.html">Xela<br/> Arias</a>
+			<!-- End Logo-->
+			<!-- Hire me badge (remove if you don't need one)-->
+			<div class="hiremebadge">
+				<div class="hiremetext">
+					<a data-toggle="modal" href="#myModal">Rexistro</a>
+				</div>
+			</div>
+			<!-- End Hire me badge-->
+		</div>
+	</div>
+</div>
+<!-- Container starts
+================================================== -->
+<div class="container">
+	
+	<!-- Main hero unit for a primary marketing message or call to action -->
+	<div class="hero-unit">
+		<h1>Letras galegas 2021</h1>
+		<p>
+			 Xela Arias, gañadora do premio do <i>Día das Letras Galegas 2021.</i> Esta é unha pequena conmemoración da súa vida e obra.
+		</p>
+	</div>
+	<!--Carousel
+	================================================== -->
+	<script>
+		 window.onload = cargar;
+		  function cargar() {
+			alert("Está entrando nunha Web sobre Xela Arias");
+		   }
+	</script>
+	<!--<script>
+		document.getElementById('prueba').onfocus = function cambioColor() {
+			document.getElementById('prueba').textContent = "Lorena Carlés Maquetadora Web";
+			document.getElementById('prueba').getElementsByClassName("footer center").style = "Color: red;";
+		}
+	</script>-->
+	
+	
+	<div class="row">
+		<div class="span16">
+			<div id="myCarousel" class="carousel slide">
+				<div class="carousel-inner imglist">
+					<!-- Remove imglist word if you don't want gray pictures-->
+					<!-- 1st item-->
+					<div class="item">
+						<img src="img/img/xela_cara.jpg" alt="Fotografía de Xela Arias">
+						<!-- <div class="carousel-caption">
+							<h4>Xela Arias</h4> 
+							<p>
+								 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
+							</p> 
+						</div>-->
+					</div>
+					<!-- 2nd column-->
+					<div class="item active">
+						<img src="img/img/xela_edit.jpg" alt="Cartel de Xela Arias para o día das letras galegas ano 2021">
+					</div>
+					<!-- 3rd item-->
+					<div class="item">
+						<img src="img/img/xela_color.jpg" alt="Fotografía de Xela Arias">
+					</div>
+					<div class="item">
+						<img src="img/img/Xela3.jpg" alt="Fotografía de Xela Arias">
+					</div>
+					<div class="item">
+						<img src="img/img/XELA.jpg" alt="Fotografía de Xela Arias">
+					</div>
+				</div>
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<!-- 3 columns under carousel 
+	================================================== -->
+	<div class="row">
+		<!-- 1 column-->
+		<div class="span-one-third">
+			<!-- <h3>Professional</h3> -->
+			<p>
+				A rebelión, a modernidade, a experimentación e a liberdade foron unha constante na vida e obra de  Xela Arias, unha figura que rompeu cos cimentos e as estruturas arcaicas, cos roles  predefinidos e que explotou a linguaxe para edificar unha independencia  estilística e conceptual que segue de plena actualidade.
+			</p>
+			<!-- <p>
+				<a class="btn" href="https://es.wikipedia.org/wiki/Xela_Arias">Mais sobre Xela</a>
+			</p>-->
+		</div>
+		<!-- 2nd column -->
+		<div class="span-one-third">
+			<h3></h3>
+			<p>
+				
+			</p>
+			<p>
+				<!-- <a class="btn" href="portofolio.html">View portofolio</a> -->
+			</p>
+		</div> 
+		<!-- 3rd column-->
+		<div class="span-one-third">
+			<!-- <h3>Responsive</h3> -->
+			<p>
+				Mozos de toda Galicia identificáronse co seu discurso marcadamente urbano, dialogaron cos seus versos e recolleron a testemuña dunha voz que levou ao límite o xénero poético e promoveu a interacción da palabra e a escrita coa música, a imaxe e mesmo a improvisación.
+			</p>
+			<p>
+				<!-- <a class="btn" href="contact.html">Get in touch</a> -->
+			</p>
+		</div>
+	</div>
+	<!-- Footer 
+================================================== -->
+	<div class="footerli">
+	</div>
+	<div class="tweetarea">
+		<div class="tweettext">
+			<div class="row">
+				<div class="span-one-third">
+					<i>"Non é xusto que destroce estas veces a balazos de confidencias. Nin que espere que comprénda-la demanda de certos inconclusos ademáns."</i>
+				</div>
+				<div class="span-one-third">
+					<div class="centermargin">
+						<div class="facebook">
+							<a href="#"></a>
+						</div>
+						<div class="twitter">
+							<a href="#"></a>
+						</div>
+						<div class="google">
+							<a href="#"></a>
+						</div>
+						<div class="flickr">
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+				<div class="span-one-third center">
+					 Queres un blog persoal? <br/>Contacta comigo<br/>
+					<span class="small"><a href="mailto:emailhire@gmail.com">lorenacarles23@gmail.com</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div  id="prueba" class="footer center">
+		 &copy; Lorena Carlés<br/>
+		Maquetadora Web
+	</div>
+</div>
+<!-- Ended Container-->
+<div class="footerend">
+</div>
+</body>
+</html>

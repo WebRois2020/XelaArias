@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Xela Arias</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Basic Page Needs
+================================================== -->
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+<!-- Scripts -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>$('#myModal').modal()</script>
+<script src="js/formvalidation.js"></script>
+<script src="js/html5placeholder.jquery.js"></script>
+<script src="js/jquery.tweet.js"></script>
+</head>
+<body>
+<!-- Top Green Bar -->
+<div class="topline">
+</div>
+<!-- Top Green Bar Ends-->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</a>
+			<div class="nav-collapse collapse">
+				<!-- Menu Links
+			================================================== -->
+				<!-- Left menu links -->
+				<ul class="nav leftmenu">
+					<li><a href="about.html">Vida</a></li>
+					<!-- <li><a href="#"></a></li> -->
+				</ul>
+				<!-- Right menu links -->
+				<ul class="nav rightmenu">
+					<li><a href="portofolio.html">Obra</a></li>
+					<!-- <li class="lastmenu"><a href="contact.html" class="lastmenu">Archivos</a></li> -->
+				</ul>
+				<!-- End Menu Links
+			================================================== -->
+				<!-- Pop up form (activated on "hire me" click)-->
+				<div id="myModal" class="modal hide fade hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+						<h3 id="myModalLabel">Enviame os teus comentarios</h3>
+					</div>
+					<div class="modal-body">
+						<div class="done">
+							<div class="alert alert-success">
+								<button type="button" class="close" data-dismiss="alert">x</button>
+								<strong>A túa mensaxe enviouse correctamente</strong><br/>
+							</div>
+						</div>
+						<div class="form">
+							<form method="post" action="process.php" id="contactform">
+								<table>
+								<tbody>
+								<tr class="element">
+									<td class="noborder">
+									</td>
+									<td class="noborder">
+										<input type="text" name="name" class="text input-xlarge" placeholder="Nome">
+									</td>
+								</tr>
+								<tr class="element">
+									<td class="noborder">
+									</td>
+									<td class="noborder">
+										<input type="text" name="email" class="text input-xlarge" placeholder="Dirección de e-mail">
+									</td>
+								</tr>
+								<tr class="element texttop">
+									<td class="noborder">
+									</td>
+									<td class="noborder">
+										<textarea name="comment" class="text textarea input-xlarge contactarea" placeholder="Escribe aquí os teus comentarios"></textarea>
+									</td>
+								</tr>
+								<tr class="element">
+									<td class="noborder">
+										 &nbsp;
+									</td>
+									<td class="noborder">
+										<input type="submit" id="submit" class="btn" value="Enviar">
+										<div class="loading">
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal">Pechar</button>
+					</div>
+				</div>
+				<!-- End pop up content modal (activated on "hire me" click)-->
+			</div>
+			<!-- Menu Ends
+			================================================== -->
+			<!-- Logo-->
+			<a class="brand logo" href="index.html">Xela<br/> Arias</a>
+			<!-- End Logo-->
+			<!-- Hire me badge (remove if you don't need one)-->
+			<div class="hiremebadge">
+				<div class="hiremetext">
+					<a data-toggle="modal" href="#myModal">Rexistro</a>
+				</div>
+			</div>
+			<!-- End Hire me badge-->
+		</div>
+	</div>
+</div>
+<!-- Container starts
+================================================== -->
+<div class="container">
+	<!-- Main hero unit for a primary marketing message or call to action -->
+	<h1 class="title">Aquí vos mostro algunhas das súas obras:</h1>
+	<div class="titlelinesimple">
+	</div>
+	<!-- Portofolio
+	================================================== -->
+	<div class="row center">
+		<div class="span16">
+			<div class="boxgrid peek">
+				<img class="cover" src="img/portofolio/amola_edit.jpg" alt="Portada do libro Non te amola!"/>
+				<h3>Non te amola!</h3>
+				<p>
+					A súa primeira achega á narrativa; un texto que é unha biografía emocional dunha infancia que se proxecta, vizosa, cara aos nosos días. Unha descuberta dunha sensibilidade magnífica. Un acontecemento literario que se abeira, ademais, ao traballo dunha grande ilustradora como Luz Beloso.<br/><a href="https://www.casadellibro.com/libro-non-te-amola/9788491516040/12256006" target="_BLANK">Mercar</a>
+				</p>
+			</div>
+			<div class="boxgrid thecombo">
+				<img class="cover" src="img/portofolio/certo_edit_2.jpg" style="width: 20em;" alt="Portada do libro De certo, a vida ía en serio"/>
+				<h3>De certo, a vida ía en serio</h3>
+				<p>
+					María Xesús Nogueira foi a encargada de realizar a selección e o estudo complementario sobre unha muller que
+					viviu de maneira intensa e, con frecuencia indómita, o seu tempo. Non  só recolle textos poéticos da autora
+					senón que recupera un prezado material: entrevistas, autopoéticas, reflexións ou conferencias que permite reconstruír a biografía e mais a personalidade da autora a partir das súas propias palabras, unha perspectiva ata agora inédita.<br/><a href="https://www.casadellibro.com/libro-de-certo-a-vida-ia-en-serio/9788412222173/12269406" target="_BLANK">Mercar</a>
+				</p>
+			</div>
+			<div class="boxgrid slidedown">
+				<img class="cover" src="img/portofolio/dario_edit.jpg" alt="Portada do libro Darñio a diario"/>
+				<h3>Darío a diario </h3>
+				<p>
+					En 1996 Xela Arias publica «Darío a diario», un libro de poemas dedicado ao seu fillo, que ofrece unha visión desidealizada e ao tempo fonda e entrañable da experiencia da maternidade. En palabras da propia poeta: «"Darío a diario" non naceu coa vocación de ser o que hoxe é: un libro encadernado e público. Foi, no seu principio, a necesidade imperiosa de explicarlle ao meu fillo o manifesto íntimo e interno de intencións maternas nas que el mesmo, polo feito de existir, me obrigaba a moverme; o compendio de contradicións que a maternidade me provoca.» <br/><a href="https://www.casadellibro.com/libro-dario-a-diario/9788483020807/786987" target="_BLANK">Mercar</a>
+				</p>
+			</div>
+			<div class="boxgrid peek">
+				<img class="cover" src="img/portofolio/denuncia_edit.jpg" alt="Portada do libro Denuncia do equilibrio"/>
+				<h3>Denuncia do equilibrio</h3>
+				<p>
+					Publicado en 1986 a contracorrente da poesía galega daquel momento, é un libro rabiosamente contemporáneo. Cuestiona a orde establecida, afonda con inquedanza na voz interior dunha poeta orixinal e libre e transmite, desde a propia sintaxe, o desacougo da vida cotiá, das emocións e do amor. Este primeiro libro de poemas de Xela Arias dá conta do arrebato dunha voz nova, independente, radicalmente propia, que se pon en marcha cunha enorme forza simbólica. <br/><a href="https://www.casadellibro.com/libro-denuncia-do-equilibrio/9788491218821/12240361" target="_BLANK">Mercar</a>
+				</p>
+			</div>
+			<div class="boxgrid thecombo">
+				<img class="cover" src="img/portofolio/tigres_edit.jpg" alt="Portada do libro Tigres coma cabalos"/>
+				<h3>Tigres coma cabalos</h3>
+				<p>
+					Catro anos despois do seu primeiro poemario publícase o segundo, Tigres coma cabalos (1990). A pesar de non  transcorrer moito  tempo entre ambos os libros, hai unha clara evolución no estilo do poeta. Cóidase máis a forma, aínda que o contido segue primando sobre esta. Dáse unha sintaxe menos arbitraria, con maior uso de signos de puntuación. Outra das características de este poemario é a ausencia de paginación. O verso segue sendo libre pero a rima aparece con máis frecuencia e xa non se limita ás terminaciones verbais. <br/>
+					<a href="https://www.casadellibro.com/libro-tigres-coma-cabalos/9788412315530/12313154" target="_BLANK">Mercar</a>
+				</p>
+			</div>
+			<div class="boxgrid slidedown">
+				<img class="cover" src="img/portofolio/poesia_edit.jpg" alt="Portada do libro Poesía reúnida"/>
+				<h3>Poesía reunida (1982-2004)</h3>
+				<p>
+					A escritora ocupou un lugar de seu na cartografía literaria das últimas décadas e a súa obra está en consonancia coa renovación do discurso poético producida dos anos 80 en diante, así como coa proliferación dos discursos do feminismo, aos que acompañou como pioneira. Xela Arias, que manifestou en numerosas ocasións un sentimento de soidade xeracional, reivindicou a condición de muller escritora e reaccionou con contundencia contra o carácter invisibilizador das etiquetas. Para ela, a poesía era «un trato coa búsqueda da vida poderosamente iluminada». <br/><a href="https://www.casadellibro.com/libro-poesia-reunida-1982-2004/9788491214281/7355233" target="_BLANK">Mercar</a>
+				</p>
+			</div>
+			<div class="boxgrid peek">
+				<img class="cover" src="img/portofolio/signo_edit.jpg" alt="Portada do libro X. Espazo para un signo"/>
+				<h3>X. Espazo para un signo</h3>
+				<p>
+				Un libro absolutamente singular, onde o X convértese no único protagonista visual, diversificándose na interpretación textual dos poetas como espazo para un signo: musa matemática da incógnita e da unión, enerxía que xermola, xorne de nós e seixo orixinal, xen oculto, xoia da amizade, símbolo da xustiza, metáfora do traballo poético, lingua atravesada… <br/><a href="https://www.casadellibro.com/libro-x-espazo-para-un-signo/9788497823142/1038218" target="_BLANK">Mercar</a>
+				</p>
+				</div>
+			<div style="float: right;
+						position: relative;
+						top: 6em;
+						right: 20vw;
+						vertical-align: middle; 
+						width: 13em;">
+			
+					<a style="padding: 1.7em;" class="btn" href="../informacion/Poemario%20Xela%20Arias.pdf" title="PDF Xela Arias"><b>Poemas de Xela Arias en arquivo PDF</b></a>
+<!--
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+					<defs>
+					<filter id="goo">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+					<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+					</filter>
+					</defs>
+					</svg>
+					<svg class="svg" viewBox="0 0 400 400">
+					<defs>
+					<filter id="duotone-filter-post-one">
+					<feColorMatrix type="matrix" values="0.14453125 0 0 0 0.33203125 0.71875 0 0 0 0.27734375 -0.34765625 0 0 0 0.73046875 0 0 0 1 0"></feColorMatrix>
+					</filter>
+					</defs>
+					</svg>
+-->
+				
+				</div>
+			
+		</div>
+</div>
+	<!-- Footer 
+================================================== -->
+	<div class="footerli">
+	</div>
+	<div class="tweetarea">
+		<div class="tweettext">
+			<div class="row">
+				<div class="span-one-third">
+					<div class="tweet">
+					</div>
+				</div>
+				<div class="span-one-third">
+					<div class="centermargin">
+						<div class="facebook">
+							<a href="#"></a>
+						</div>
+						<div class="twitter">
+							<a href="#"></a>
+						</div>
+						<div class="google">
+							<a href="#"></a>
+						</div>
+						<div class="flickr">
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+				<div class="span-one-third center">
+					 Queres un blog persoal? <br/>Contacta comigo<br/>
+					<span class="small"><a href="mailto:emailhire@gmail.com">lorenacarles23@gmail.co</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer center">
+		&copy; Lorena Carlés <br/>
+			Maquetadora Web
+	</div>
+</div>
+<!-- Ended Container-->
+<div class="footerend">
+</div>
+<!-- Portofolio Script 
+================================================== -->
+<script type="text/javascript">
+			$(document).ready(function(){
+				//To switch directions up/down and left/right just place a "-" in front of the top/left attribute
+				//Vertical Sliding
+				$('.boxgrid.slidedown').hover(function(){
+					$(".cover", this).stop().animate({top:'-300px'},{queue:false,duration:500});
+				}, function() {
+					$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:500});
+				});
+				//Horizontal Sliding
+				$('.boxgrid.slideright').hover(function(){
+					$(".cover", this).stop().animate({left:'325px'},{queue:false,duration:500});
+				}, function() {
+					$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:500});
+				});
+				//Diagnal Sliding
+				$('.boxgrid.thecombo').hover(function(){
+					$(".cover", this).stop().animate({top:'260px', left:'325px'},{queue:false,duration:500});
+				}, function() {
+					$(".cover", this).stop().animate({top:'0px', left:'0px'},{queue:false,duration:500});
+				});
+				//Partial Sliding (Only show some of background)
+				$('.boxgrid.peek').hover(function(){
+					$(".cover", this).stop().animate({top:'290px'},{queue:false,duration:500});
+				}, function() {
+					$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:500});
+				});
+				//Full Caption Sliding (Hidden to Visible)
+				$('.boxgrid.captionfull').hover(function(){
+					$(".cover", this).stop().animate({top:'160px'},{queue:false,duration:500});
+				}, function() {
+					$(".cover", this).stop().animate({top:'260px'},{queue:false,duration:500});
+				});
+				//Caption Sliding (Partially Hidden to Visible)
+				$('.boxgrid.caption').hover(function(){
+					$(".cover", this).stop().animate({top:'160px'},{queue:false,duration:500});
+				}, function() {
+					$(".cover", this).stop().animate({top:'220px'},{queue:false,duration:500});
+				});
+			});
+		</script>
+</body>
+</html>

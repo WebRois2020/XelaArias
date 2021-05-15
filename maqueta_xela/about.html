@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Xela Arias</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Basic Page Needs
+================================================== -->
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+<!-- Scripts -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>$('#myModal').modal()</script>
+<script src="js/formvalidation.js"></script>
+<script src="js/html5placeholder.jquery.js"></script>
+<script src="js/jquery.tweet.js"></script>
+</head>
+<body>
+<!-- Top Green Bar -->
+<div class="topline">
+</div>
+<!-- Top Green Bar Ends-->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</a>
+			<div class="nav-collapse collapse">
+				<!-- Menu Links
+			================================================== -->
+				<!-- Left menu links -->
+				<ul class="nav leftmenu">
+					
+					<li><a href="about.html">Vida</a></li>
+					<!-- <li><a href="portofolio.html">Obra</a></li> -->
+				</ul>
+				<!-- Right menu links -->
+				<ul class="nav rightmenu">
+					<li><a href="portofolio.html">Obra</a></li>
+					<!-- <li class="lastmenu"><a href="contact.html" class="lastmenu">Archivos</a></li> -->
+				</ul>
+				<!-- End Menu Links
+			================================================== -->
+				<!-- Pop up form (activated on "hire me" click)-->
+				<div id="myModal" class="modal hide fade hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+						<h3 id="myModalLabel">Enviame os teus comentarios </h3>
+					</div>
+					<div class="modal-body">
+						<div class="done">
+							<div class="alert alert-success">
+								<button type="button" class="close" data-dismiss="alert">x</button>
+								<strong>A túa mensaxe enviouse correctamente</strong><br/>
+							</div>
+						</div>
+						<div class="form">
+							<form method="post" action="process.php" id="contactform">
+								<table>
+								<tbody>
+								<tr class="element">
+									<td class="noborder">
+									</td>
+									<td class="noborder">
+										<input type="text" name="name" class="text input-xlarge" placeholder="Nome">
+									</td>
+								</tr>
+								<tr class="element">
+									<td class="noborder">
+									</td>
+									<td class="noborder">
+										<input type="text" name="email" class="text input-xlarge" placeholder="Dirección de e-mail">
+									</td>
+								</tr>
+								<tr class="element texttop">
+									<td class="noborder">
+									</td>
+									<td class="noborder">
+										<textarea name="comment" class="text textarea input-xlarge contactarea" placeholder="Escribe aquí os teus comentarios"></textarea>
+									</td>
+								</tr>
+								<tr class="element">
+									<td class="noborder">
+										 &nbsp;
+									</td>
+									<td class="noborder">
+										<input type="submit" id="submit" class="btn" value="Enviar">
+										<div class="loading">
+										</div>
+									</td>
+								</tr>
+								</tbody>
+								</table>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal">Pechar</button>
+					</div>
+				</div>
+				<!-- End pop up content modal (activated on "hire me" click)-->
+			</div>
+			<!-- Menu Ends
+			================================================== -->
+			<!-- Logo-->
+			<a class="brand logo" href="index.html">Xela<br/> Arias</a>
+			<!-- End Logo-->
+			<!-- Hire me badge (remove if you don't need one)-->
+			<div class="hiremebadge">
+				<div class="hiremetext">
+					<a data-toggle="modal" href="#myModal">Rexistro</a>
+				</div>
+			</div>
+			<!-- End Hire me badge-->
+		</div>
+	</div>
+</div>
+<!-- Container starts
+================================================== -->
+<div class="container">
+	<!-- Main hero unit for a primary marketing message or call to action -->
+	<h1 class="title">Sobre Xela</h1>
+	<div class="titlelinesimple">
+	</div>
+	<div class="row">
+		<div class="span8">
+			<p>
+				<img src="../imagenes/xela_color.jpg" class="imglist" alt="" style="float:left;margin-right:20px;width: 100px;margin-top: 16px;border-radius: 90px;"> Xela Arias Castaño, naceu en Lugo en 1962 co nome de María dos Anxos. Finalmente, en 1995 o xuíz Alejandro Roia Nonide autorizou o cambio de nome polo de Xela. Licenciada en Filoloxía Hispánica, Xela Arias pasou a maior parte da súa vida en Vigo, onde chegou a ser un referente do mundo editorial e da poesía de muller. En 1980 fundouse a editorial Xerais, onde traballou como correctora e asesora lingüística durante dez anos. 
+			</p>
+		</div>
+		<div class="span8">
+			<p>
+				A súa introdución no mundo literario produciuse en 1986 con Denuncia do equilibrio, un poemario innovador, con temática heteroxénea que prioriza o seu fondo por encima da súa forma e sintaxe arbitraria. Con esta obra deuse a coñecer e logrou ser finalista do Premio Losada Diéguez. En novembro do ano 2003 Xela Arias faleceu aos 41 anos nun hospital de Vigo debido a un ataque cardíaco. Foi enterrada no cemiterio Vigués de Pereiró.
+			</p>
+		</div>
+	</div>
+	<div class="break">
+	</div>
+	<br/>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/fcgrxjPcutU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: relative;left: 11.2em;"></iframe>
+	<!-- <div class="row">
+		<div class="span4">
+			<img src="img/arrow.png" alt="" style="margin-left: 40px;">
+		</div>
+		<div class="span4">
+			<h4 class="highlight">Web design</h4>
+			<p>
+				Nunc viverra imperdiet enim Pellentesque habitant morbitristique netus et malesuada fames. Maecenas porttitor congue massa. Fusce posuere, magna sed ultricies.
+			</p>
+		</div>
+		<div class="span4">
+			<h4 class="highlight">Printing</h4>
+			<p>
+				Nunc viverra imperdiet enim Pellentesque habitant morbitristique netus et malesuada fames. Maecenas porttitor congue massa. Ultricies, purus lectus.
+			</p>
+		</div>
+		<div class="span4">
+			<h4 class="highlight">Photography</h4>
+			<p>
+				Nunc viverra imperdiet enim Pellentesque habitant morbitristique netus et malesuada fames. Maecenas porttitor congue massa. Pur lectus malesuada libero.
+			</p>
+		</div>
+	</div> -->
+	<!-- Footer 
+================================================== -->
+	<div class="footerli">
+	</div>
+	<div class="tweetarea">
+		<div class="tweettext">
+			<div class="row">
+				<div class="span-one-third">
+					<div class="tweet">
+					</div>
+				</div>
+			<div class="span-one-third">
+					<div class="centermargin">
+						<div class="facebook">
+							<a href="#"></a>
+						</div>
+						<div class="twitter">
+							<a href="#"></a>
+						</div>
+						<div class="google">
+							<a href="#"></a>
+						</div>
+						<div class="flickr">
+							<a href="#"></a>
+						</div>
+					</div> 
+				</div>
+				<div class="span-one-third center">
+					 Queres un blog persoal? <br/>Contacta comigo<br/>
+					<span class="small"><a href="mailto:emailhire@gmail.com">lorenacarles23@gmail.com</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer center">
+		 &copy; Lorena Carlés <br/>
+			Maquetadora Web
+	</div>
+</div>
+<!-- Ended Container-->
+<div class="footerend">
+</div>
+</body>
+</html>
