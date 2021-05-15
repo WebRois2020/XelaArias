@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		  <script src="https://kit.fontawesome.com/f35a40f132.js" crossorigin="anonymous"></script>
+		  <style>
+        
+        /*carrousel*/
+              
+              #wrapper {
+              width: 100%;
+              max-width: 964px;
+              position: relative;
+            }
+
+            #carousel {
+              overflow: auto;
+              scroll-behavior: smooth;
+              scrollbar-width: none;
+                border-radius: 1em;
+            }
+
+            #carousel::-webkit-scrollbar {
+              height: 0;
+            }
+
+            #prev,
+            #next {
+              display: flex;
+              justify-content: center;
+              align-content: center;
+              background: white;
+              border: none;
+              padding: 8px;
+              border-radius: 50%;
+              outline: 0;
+              cursor: pointer;
+              position: absolute;
+            }
+
+            #prev {
+              top: 50%;
+              left: 0;
+              transform: translate(50%, -50%);
+              display: none;
+            }
+
+            #next {
+              top: 50%;
+              right: 0;
+              transform: translate(-50%, -50%);
+            }
+
+            #content {
+              display: grid;
+              grid-gap: 16px;
+              grid-auto-flow: column;
+              margin: auto;
+              box-sizing: border-box;
+            }
+
+            .item {
+              width: 250px;
+              height: 250px;
+              background:black;
+                border-radius: 1em;
+            }
+
+        /*fin carousel*/
+                </style>
+	
+              
+     
+	</head>
+	<body>   
+
+             <div id="wrapper">
+                <div id="carousel">
+                    <div id="content">
+                      <img
+                        class="item"
+                        src="galeria/calle.jpg"
+                      />
+                      <img
+                        src="galeria/placa.jpg"
+                        class="item"
+                      />
+                      <img
+                        src="galeria/biblio.jpg"
+                        class="item"
+                      />
+                      <img
+                        src="galeria/escultura.jpg"
+                        class="item"
+                      />
+                      <img
+                        src="galeria/escultura2.jpg"
+                        class="item"
+                      />
+                      <img
+                        src="galeria/serie.jpg"
+                        class="item"
+                      />
+                      <img
+                        src="galeria/premio.jpg"
+                        class="item"
+                      />
+                    </div>
+                 </div>
+                  <button id="prev">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0V0z" />
+                      <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+                    </svg>
+                  </button>
+                  <button id="next">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0V0z" />
+                      <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+                    </svg>
+                  </button>
+             </div>
+    
+         
+              
+                   <script>
+                       
+                        const gap = 16;
+
+                        const carousel = document.getElementById("carousel"),
+                          content = document.getElementById("content"),
+                          next = document.getElementById("next"),
+                          prev = document.getElementById("prev");
+
+                        next.addEventListener("click", e => {
+                          carousel.scrollBy(width + gap, 0);
+                          if (carousel.scrollWidth !== 0) {
+                            prev.style.display = "flex";
+                          }
+                          if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+                            next.style.display = "none";
+                          }
+                        });
+                        prev.addEventListener("click", e => {
+                          carousel.scrollBy(-(width + gap), 0);
+                          if (carousel.scrollLeft - width - gap <= 0) {
+                            prev.style.display = "none";
+                          }
+                          if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+                            next.style.display = "flex";
+                          }
+                        });
+
+                        let width = carousel.offsetWidth;
+                        window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
+                    </script>     
+                    
+                    
+                    
+	
+	</body>
+</html>
+
