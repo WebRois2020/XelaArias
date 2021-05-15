@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <title>Xela Arias</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">	
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
+    <script src="https://kit.fontawesome.com/2c7fc28a2f.js"></script>
+    <script src="https://kit.fontawesome.com/f35a40f132.js" crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <!-- <script src="js/jquery.min.js"></script>-->
+    <!-- <script src="js/skel.min.js"></script>-->
+    <!-- <script src="js/util.js"></script>-->
+    <!-- <script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <!-- <script src="js/main.js"></script>-->
+
+    <style>
+		@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+		*,
+		*::before,
+		*::after {
+			padding: 0;
+			margin-bottom: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #171618;
+			width: 80vw;
+			margin: 3vh auto;
+			font-family: 'Montserrat', sans-serif;
+			max-width: 750px;
+			overflow: auto;
+            background-size: auto;
+            color: white;
+		}
+
+		.lines-container {
+			width: 60px;
+			margin-left: auto;
+			cursor: pointer;
+			border: 1px solid #aeaa8c;
+			border-radius: 1px;
+		}
+
+		.lines-container:hover {
+			background-color: #aeaa8c;
+			border: 1px solid white;
+		}
+
+		.line {
+			height: 3px;
+			margin: 5px;
+			border-radius: 50px;
+			background-color: #ffffff;
+			margin-right: auto;
+			transition: all 0.5s ease-out;
+			/* transition: width 0.5s ease-out; 
+			anhado prefixos navegadores, no meu equipo non son necesarios*/
+		}
+
+		.line-1 {
+			width: 50px;
+		}
+
+		.line-2 {
+			width: 40px;
+		}
+
+		.line-3 {
+			width: 30px;
+		}
+
+		.lines-container:hover .line-1 {
+			width: 30px;
+			background-color: #171618;
+		}
+
+		.lines-container:hover .line-2 {
+			width: 40px;
+			background-color: #171618;
+		}
+
+		.lines-container:hover .line-3 {
+			width: 50px;
+			background-color: #171618;
+		}
+
+		.menu {
+			list-style-type: none;
+			border-bottom: 1px solid #aeaa8c;
+			max-height: 0;
+			overflow: hidden;
+			/*transition: max-height 0.5s linear; 
+			anhado prefixos navegadores, no meu equipo non son necesarios*/
+			transition: all 0.2s linear;
+			-webkit-transition: all 0.2s linear;
+			-moz-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+			position: relative;
+
+		}
+
+		.pointer {
+			width: 0;
+			border-width: 10px;
+			border-style: solid;
+			border-color: white #171618 #171618 #171618;
+			margin-left: 50%;
+			transform: translateX(-50%);
+			cursor: pointer;
+		}
+
+		.pointer:hover {
+			border-color: white #171618 #171618 #171618;
+
+		}
+
+		.pointer-up {
+			border-color: #aeaa8c #aeaa8c white #aeaa8c;
+			transform: translateY(-21px);
+		}
+
+		.pointer-up:hover {
+			border-color: #aeaa8c #aeaa8c #171618 #aeaa8c;
+		}
+
+		a.outer {
+			display: block;
+			color: whitesmoke;
+			text-decoration: none;
+			margin-top: 2px;
+			background-color: #aeaa8c;
+			padding: 1em;
+			/* transition: all 0.5s linear;
+			anhado prefixos navegadores, no meu equipo non son necesarios*/
+			transition: all 0.2s linear;
+			-webkit-transition: all 0.2s linear;
+			-moz-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+		}
+
+		a.inner {
+			text-decoration: none;
+			color: whitesmoke;
+			display: block;
+			padding: 0.5em 3em;
+			border: 1px solid #171618;
+			opacity: 0.8;
+			/* transition: all 0.5s linear;
+			anhado prefixos navegadores, no meu equipo non son necesarios*/
+			transition: all 0.2s linear;
+			-webkit-transition: all 0.2s linear;
+			-moz-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+
+		}
+
+		a.inner:hover {
+			border: 1px solid wheat;
+			opacity: 1;
+		}
+
+		.btn-anime::after {
+			right: 4.8%;
+			bottom: 20%;
+			box-shadow: 0px 0px 0px 0px #171618;
+		}
+
+		.content::after {
+			content: "\2212";
+		}
+
+
+		/*
+		.blog,
+		.contact {
+			position: relative;
+			cursor: inherit;
+			pointer-events: none;
+		}
+*/
+
+		/*	.blog::after,
+		.contact::after {
+			content: "+";
+			cursor: pointer;
+			pointer-events: all;
+			width: 20px;
+			height: 20px;
+			color: black;
+			background-color: white;
+			border-radius: 50%;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			right: 5%;
+			box-shadow: 1px 3px 1px 1px #171618;
+			transition: background-color 0.5s linear;
+
+		}*/
+
+		/*
+		.blog:hover::after,
+		.contact:hover::after {
+		background-color: palevioletred;
+		}
+*/
+		/*
+		.blog-child,
+		.contact-child {
+			max-height: 0px;
+			overflow: hidden;
+			transition: all 0.5s linear;
+		}
+*/
+
+/* CSS GALERIA */
+
+	#toggleContainer label { 
+ 		text-align: center;
+  		width: 70px;
+	}
+
+	#container {
+ 		height: 100%;
+  		width: 100%;
+  		box-sizing: border-box;
+  		display: inline-flex;
+  		justify-content: center;
+	}
+
+	#toggleContainer {
+  		height: 10vh;
+  		display: flex;
+  		justify-content: flex-end;
+ 		align-items: center;
+  		width: 95vw;
+  		position: absolute;
+	}
+
+	#tilesContainer {
+  		min-height: 90vh;
+  		width: 100vw;
+  		margin-top: 10vh;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+  		flex-wrap: wrap;
+  		box-sizing: border-box;
+  		align-content: center;
+
+	}
+
+	.tileItem {
+  		width: 250px;
+  		height: 250px;
+  		margin: 5px;
+  		border-radius: 5px;
+ 		transition: all 0.5s ease;
+	}
+
+	.tileItem:hover {
+   		transform: scale(1.05);
+  		transition: all 0.5s ease;
+	}
+
+	#galleryContainer { 
+ 		height: 500px;
+  		width: 800px;
+  		background: transparent;
+  		display: flex;
+  		flex-direction: row;
+  		justify-content: center;
+  		align-items: center;
+  		box-sizing: border-box;
+  		position: relative;
+	}
+
+	#toggle {
+  		height: 10vh;
+  		width: 200px;
+  		display: flex;
+  		align-items: center;
+  		margin: 10px;
+	}
+
+	#tilesView {
+  		min-height: 100vh;
+  		width: 100vw;
+  		z-index: -99999999999999999999;
+  		display: none;
+  		justify-content: center;
+  		align-items: center;
+	}
+
+	#galleryView {
+  		height: 100vh;
+  		width: 100vw;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+  		border-radius: 10px;
+	}
+
+	#outer3 {
+  		width: 100px;
+  		height: 40px;
+  		background-color: transparent;
+  		margin: 10px auto;
+  		border-radius: 3px;
+  		transition: all 0.5s;
+	}
+
+	#slider3 {
+ 		height: 36px;
+  		width: 46px;
+  		background-color: transparent;
+  		border-radius: 3px;  
+  		transition: all 0.5s;
+	}
+
+	#slider3.active {
+  		-webkit-transform: translatex(50px);
+  		-ms-transform: translatex(50px);
+  		-o-transform: translatex(50px);
+  		transform: translatex(50px);
+  		transition: all 0.5s;
+  		background-color: transparent;
+	}
+
+	#outer3.outerActive {
+  		background-color: transparent;
+	}
+
+	#mainView {
+  		height: 450px;
+  		width: 450px;  
+  		border-radius: 5px;
+  		background-color:#aeaa8c ;
+  		margin-left: 10px;
+  		margin-right: 10px;
+  		z-index: 1;
+  		transition: all 1s;  
+	}
+
+	#mainView:hover {
+  		transform: scale(1.2);
+  		transition: all 1s;   
+	}
+
+	#leftView {
+  		height: 400px;
+  		width: 150px;
+  		opacity: 0.5;
+  		border-radius: 5px;
+  		transform: skewy(5deg);
+  		transform-origin: top right;
+  		background-color: #CDCD9E;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+  		transition: all 1s;  
+	}
+
+	#leftView:hover {
+  		opacity: 1;
+  		transition: all 1s;
+	}
+
+	#rightView {
+  		height: 400px;
+  		width: 150px;
+  		opacity: 0.5;
+  		border-radius: 5px;
+  		transform: skewy(-5deg);
+  		transform-origin: top left;
+  		background-color:red;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+ 		transition: all 1s;
+	}
+
+	#rightView:hover {
+  		opacity: 1;
+  		transition: all 1s;
+	}
+
+	.navBtns {
+  		width: 80px;
+  		height: 80px;
+  		border-radius: 50%;
+  		border: none;
+  		position: absolute;
+  		opacity: 0.8;
+  		background-color: transparent;
+  		cursor: pointer;
+  		color: white;
+	}
+
+	.navBtns:hover {
+  		opacity: 1;
+  		transition: all 1s;
+  		background-color: #aeaa8c;
+	}
+
+	#navLeft {
+  		left: 50px;
+	}
+
+	#navRight {
+  		right: 50px;
+	}
+
+	#linkTag { 
+  		cursor: pointer;
+  		z-index: 1;
+  		box-sizing: border-box;
+	}
+
+	#container{
+  		margin-top:-1.5em;
+  		padding: 0;
+  		color: transparent; 
+ 
+	}
+
+/* Acaba CSS galeria */
+
+	</style>
+</head>
+    
+	<body>
+		<div class="containers">
+	       <div class="lines-container">
+	           <div class="line line-1"></div>
+	           <div class="line line-2"></div>
+	           <div class="line line-3"></div>
+	       </div>
+	       <ul class="menu">
+	           <li><a href="index.html" class="outer">Xela Arias</a></li>
+	        	<li><a href="xela_vida.html" class="outer">Vida</a></li>
+	        	<li><a href="xela_obra.html" class="outer">Obra</a></li>
+	        	<li><a href="galeria.html" class="outer">Galería</a></li>
+
+   <!-- <li><a href="#" class="outer">Blog</a>
+	               <ul class="blog-child">
+	                    <li><a href="#" class="inner">Tech</a></li>
+	                    <li><a href="#" class="inner">Travels</a></li>
+	                    <li><a href="#" class="inner">Gaming</a></li>
+	                </ul>
+	            </li> -->
+	   <!--  <li><a href="#" class="outer">Contacts</a> 
+	                <ul class="contact-child">
+	                    <li><a href="#" class="inner">Email</a></li>
+	                    <li><a href="#" class="inner">Social Media</a></li>
+	                    <li><a href="#" class="inner">Address</a></li>
+	                </ul>
+	           </li> -->
+	       </ul>
+       <div class="pointer"> </div>
+    </div>  
+
+<div id="container">
+      <div id="toggleContainer">
+         <label>Carousel</label>
+         <div id="toggle">
+           <div id="outer3">
+              <div id="slider3"></div>
+           </div>
+           <label>Tiles</label>
+        </div>
+      </div>
+      <div id="galleryView">
+        <div id="galleryContainer">
+           <div id="leftView"></div>
+           <button id="navLeft" class="navBtns"><i class="fas fa-arrow-left fa-3x"></i></button>
+           <a id="linkTag">
+              <div id="mainView"></div>
+           </a>
+           <div id="rightView"></div>
+           <button id="navRight" class="navBtns"><i class="fas fa-arrow-right fa-3x"></i></button>
+        </div>
+      </div>
+      <div id="tilesView">
+        <div id="tilesContainer"></div>
+      </div>
+    </div>
+   
+       	<!-- script hai que poñelo despois do menu para que se execute despois de que cargue o contido. -->
+        <script>
+		  let cont = document.querySelector(".lines-container");
+		  let menu = document.querySelector(".menu");
+		  let pointer = document.querySelector(".pointer");
+		  //let blog = document.querySelector(".blog");
+		  //let contact = document.querySelector(".contact");
+		  //let blogChild = document.querySelector(".blog-child");
+		  //let contactChild = document.querySelector(".contact-child");
+		  cont.addEventListener("click", () => {
+			//			blog.classList.remove("content");
+			//			contact.classList.remove("content");
+			if (menu.style.maxHeight) {
+				menu.style.maxHeight = null;
+				//blogChild.style.maxHeight = null;
+				//	contactChild.style.maxHeight = null;
+				pointer.style.display = "none";
+				setTimeout(() => {
+					pointer.classList.remove("pointer-up");
+					pointer.style.display = "block";
+				}, 100); //500
+
+			} else {
+				menu.style.maxHeight = menu.scrollHeight + "px";
+				pointer.style.display = "none";
+				setTimeout(() => {
+					pointer.classList.toggle("pointer-up");
+					pointer.style.display = "block";
+				}), 100; //500
+			}
+		  })
+		  pointer.addEventListener("click", () => {
+			// blog.classList.remove("content");
+			// contact.classList.remove("content");
+			if (menu.style.maxHeight) {
+				menu.style.maxHeight = null;
+				// blogChild.style.maxHeight = null;
+				// contactChild.style.maxHeight = null;
+				pointer.style.display = "none";
+				setTimeout(() => {
+					pointer.classList.remove("pointer-up");
+					pointer.style.display = "block";
+				}, 100); //500
+			} else {
+				menu.style.maxHeight = menu.scrollHeight + "px";
+				pointer.style.display = "none";
+				setTimeout(() => {
+					pointer.classList.toggle("pointer-up");
+					pointer.style.display = "block";
+				}, 100); //500
+			 }
+		  })
+		  //		blog.addEventListener("click", () => {
+		  //			if (blogChild.style.maxHeight) {
+		  //				blogChild.style.maxHeight = null;
+		  //				blog.classList.add("btn-anime");
+		  //				blog.classList.remove("content");
+		  //				setTimeout(() => {
+		  //					blog.classList.remove("btn-anime");
+		  //				}, 100);
+		  //			} else {
+		  //				blogChild.style.maxHeight = blogChild.scrollHeight + "px";
+		  //				menu.style.maxHeight = menu.scrollHeight + blogChild.scrollHeight + "px";
+		  //				blog.classList.add("btn-anime");
+		  //				blog.classList.add("content");
+		  //				setTimeout(() => {
+		  //					blog.classList.remove("btn-anime");
+		  //				}, 100);
+		  //			}
+		  //		})
+		  //		contact.addEventListener("click", () => {
+		  // if (contactChild.style.maxHeight) {
+		  // contactChild.style.maxHeight = null;
+		  // contact.classList.add("btn-anime");
+		  // contact.classList.remove("content");
+		  // setTimeout(() => {
+		  // contact.classList.remove("btn-anime");
+		  // }, 100);
+		  // } else {
+		  // contactChild.style.maxHeight = contactChild.scrollHeight + "px";
+		  // menu.style.maxHeight = menu.scrollHeight + contactChild.scrollHeight + "px";
+		  // contact.classList.add("btn-anime");
+		  // contact.classList.add("content");
+		  // setTimeout(() => {
+		  // contact.classList.remove("btn-anime");
+		  // }, 100);
+		  // }
+		  // })
+
+	</script>
+        
+    <script type="text/javascript">
+    	document.getElementById("outer3").addEventListener("click", toggleState3);
+    
+function toggleState3() {
+  let galleryView = document.getElementById("galleryView")
+  let tilesView = document.getElementById("tilesView")
+  let outer = document.getElementById("outer3");
+  let slider = document.getElementById("slider3");
+  let tilesContainer = document.getElementById("tilesContainer");
+  if (slider.classList.contains("active")) {
+    slider.classList.remove("active");
+    outer.classList.remove("outerActive");
+    galleryView.style.display = "flex";
+    tilesView.style.display = "none";
+    
+    while (tilesContainer.hasChildNodes()) {
+      tilesContainer.removeChild(tilesContainer.firstChild)
+      }  
+  } else {
+    slider.classList.add("active");
+    outer.classList.add("outerActive");
+    galleryView.style.display = "none";
+    tilesView.style.display = "flex";
+     
+    for (let i = 0; i <= imgObject.length - 1; i++) {
+      let tileItem = document.createElement("div");
+      tileItem.classList.add("tileItem");
+      tileItem.style.background =  "url(" + imgObject[i] + ")";
+      tileItem.style.backgroundSize = "contain";  
+      tilesContainer.appendChild(tileItem);      
+    }
+  };
+}
+
+let imgObject = [
+  "imagen/xela1.jpg",
+  "imagen/xela2.jpg",
+  "imagen/xela3.jpeg",
+  "imagen/xela4.jpg",
+  "imagen/xela5.jpg",
+  "imagen/xela6.jpg",
+];
+
+let mainImg = 0;
+let prevImg = imgObject.length - 1;
+let nextImg = 1;
+
+function loadGallery() {
+
+  let mainView = document.getElementById("mainView");
+  mainView.style.background = "url(" + imgObject[mainImg] + ")";
+
+  let leftView = document.getElementById("leftView");
+  leftView.style.background = "url(" + imgObject[prevImg] + ")";
+  
+  let rightView = document.getElementById("rightView");
+  rightView.style.background = "url(" + imgObject[nextImg] + ")";
+  
+  let linkTag = document.getElementById("linkTag")
+  linkTag.href = imgObject[mainImg];
+
+};
+
+function scrollRight() {
+  
+  prevImg = mainImg;
+  mainImg = nextImg;
+  if (nextImg >= (imgObject.length -1)) {
+    nextImg = 0;
+  } else {
+    nextImg++;
+  }; 
+  loadGallery();
+};
+
+function scrollLeft() {
+  nextImg = mainImg
+  mainImg = prevImg;
+   
+  if (prevImg === 0) {
+    prevImg = imgObject.length - 1;
+  } else {
+    prevImg--;
+  };
+  loadGallery();
+};
+
+document.getElementById("navRight").addEventListener("click", scrollRight);
+document.getElementById("navLeft").addEventListener("click", scrollLeft);
+document.getElementById("rightView").addEventListener("click", scrollRight);
+document.getElementById("leftView").addEventListener("click", scrollLeft);
+document.addEventListener('keyup',function(e){
+    if (e.keyCode === 37) {
+    scrollLeft();
+  } else if(e.keyCode === 39) {
+    scrollRight();
+  }
+});
+
+loadGallery();
+
+
+
+
+    </script>    
+	</body>
+</html>
+

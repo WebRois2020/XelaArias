@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <title>Xela Arias</title>
+    <meta charset="utf-8">
+		
+    <script src="https://kit.fontawesome.com/f35a40f132.js" crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <!-- <script src="js/jquery.min.js"></script>-->
+    <!-- <script src="js/skel.min.js"></script>-->
+    <!-- <script src="js/util.js"></script>-->
+    <!-- <script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <!-- <script src="js/main.js"></script>-->
+
+    <style>
+	@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+		*,
+		*::before,
+		*::after {
+			padding: 0;
+			margin-bottom: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #171618;
+			width: 80vw;
+			margin: 3vh auto;
+			font-family: 'Montserrat', sans-serif;
+			max-width: 750px;
+			overflow: auto;
+            background-size: auto;
+            color: white;
+		}
+
+		.lines-container {
+			width: 60px;
+			margin-left: auto;
+			cursor: pointer;
+			border: 1px solid #aeaa8c;
+			border-radius: 1px;
+		}
+
+		.lines-container:hover {
+			background-color: #aeaa8c;
+			border: 1px solid white;
+		}
+
+		.line {
+			height: 3px;
+			margin: 5px;
+			border-radius: 50px;
+			background-color: #ffffff;
+			margin-right: auto;
+			transition: all 0.5s ease-out;
+			/* transition: width 0.5s ease-out; 
+			anhado prefixos navegadores, no meu equipo non son necesarios*/
+		}
+
+		.line-1 {
+			width: 50px;
+		}
+
+		.line-2 {
+			width: 40px;
+		}
+
+		.line-3 {
+			width: 30px;
+		}
+
+		.lines-container:hover .line-1 {
+			width: 30px;
+			background-color: #171618;
+		}
+
+		.lines-container:hover .line-2 {
+			width: 40px;
+			background-color: #171618;
+		}
+
+		.lines-container:hover .line-3 {
+			width: 50px;
+			background-color: #171618;
+		}
+
+		.menu {
+			list-style-type: none;
+			border-bottom: 1px solid #aeaa8c;
+			max-height: 0;
+			overflow: hidden;
+			/*transition: max-height 0.5s linear; 
+			anhado prefixos navegadores, no meu equipo non son necesarios*/
+			transition: all 0.2s linear;
+			-webkit-transition: all 0.2s linear;
+			-moz-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+			position: relative;
+
+		}
+
+		.pointer {
+			width: 0;
+			border-width: 10px;
+			border-style: solid;
+			border-color: white #171618 #171618 #171618;
+			margin-left: 50%;
+			transform: translateX(-50%);
+			cursor: pointer;
+		}
+
+		.pointer:hover {
+			border-color: white #171618 #171618 #171618;
+
+		}
+
+		.pointer-up {
+			border-color: #aeaa8c #aeaa8c white #aeaa8c;
+			transform: translateY(-21px);
+		}
+
+		.pointer-up:hover {
+			border-color: #aeaa8c #aeaa8c #171618 #aeaa8c;
+		}
+
+		a.outer {
+			display: block;
+			color: whitesmoke;
+			text-decoration: none;
+			margin-top: 2px;
+			background-color: #aeaa8c;
+			padding: 1em;
+			/* transition: all 0.5s linear;
+			anhado prefixos navegadores, no meu equipo non son necesarios*/
+			transition: all 0.2s linear;
+			-webkit-transition: all 0.2s linear;
+			-moz-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+		}
+
+		a.inner {
+			text-decoration: none;
+			color: whitesmoke;
+			display: block;
+			padding: 0.5em 3em;
+			border: 1px solid #171618;
+			opacity: 0.8;
+			/* transition: all 0.5s linear;
+			anhado prefixos navegadores, no meu equipo non son necesarios*/
+			transition: all 0.2s linear;
+			-webkit-transition: all 0.2s linear;
+			-moz-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+
+		}
+
+		a.inner:hover {
+			border: 1px solid wheat;
+			opacity: 1;
+		}
+
+		.btn-anime::after {
+			right: 4.8%;
+			bottom: 20%;
+			box-shadow: 0px 0px 0px 0px #171618;
+		}
+
+	/*	.content::after {
+			content: "\2212";
+		}*/
+
+		/*
+		.blog,
+		.contact {
+			position: relative;
+			cursor: inherit;
+			pointer-events: none;
+		}
+*/
+
+		/*	.blog::after,
+		.contact::after {
+			content: "+";
+			cursor: pointer;
+			pointer-events: all;
+			width: 20px;
+			height: 20px;
+			color: black;
+			background-color: white;
+			border-radius: 50%;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			right: 5%;
+			box-shadow: 1px 3px 1px 1px #171618;
+			transition: background-color 0.5s linear;
+
+		}*/
+
+		/*
+		.blog:hover::after,
+		.contact:hover::after {
+		background-color: palevioletred;
+		}
+*/
+		/*
+		.blog-child,
+		.contact-child {
+			max-height: 0px;
+			overflow: hidden;
+			transition: all 0.5s linear;
+		}
+*/
+
+/* empeza CSS TABLA*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;700&display=swap');
+
+h1 {
+  font-size: 48px;
+  color: #232c3d;
+}
+
+.wrapper {
+  width: 590px;
+  margin: auto;
+  background-color: #171618;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.buttonWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+button {
+  letter-spacing: 3px;
+  border: none;
+  padding: 10px;
+  background-color: #aeaa8c;
+  color: #232c3d;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: #dcd7b8;
+}
+
+button.active {
+  background-color: white;
+}
+
+.active {
+  background-color: #171618;
+}
+
+p {
+  text-align: left;
+  padding: 10px;
+}
+
+.content {
+  display: none;
+  padding: 10px 20px;
+}
+
+.content.active {
+  display: block;
+
+}
+
+.mix{
+	width: 100%;
+	display: inline-flex;
+  	justify-content: center;
+  	margin-top: 1em;
+}
+
+#home{
+	margin-left: -1em;
+	justify-content: center;
+}
+
+#about{
+	margin-left: 11.5em;
+	justify-content: center;
+
+}
+
+#contact{
+	margin-left: 24em;
+	justify-content: center;
+
+}
+
+	</style>
+
+</head>
+    
+	<body>
+		<div class="container">
+	       <div class="lines-container">
+	           <div class="line line-1"></div>
+	           <div class="line line-2"></div>
+	           <div class="line line-3"></div>
+	       </div>
+	       <ul class="menu">
+	           <li><a href="index.html" class="outer">Xela Arias</a></li>
+	        	<li><a href="xela_vida.html" class="outer">Vida</a></li>
+	        	<li><a href="xela_obra.html" class="outer">Obra</a></li>
+	        	<li><a href="galeria.html" class="outer">Galería</a></li>
+
+   <!-- <li><a href="#" class="outer">Blog</a>
+	               <ul class="blog-child">
+	                    <li><a href="#" class="inner">Tech</a></li>
+	                    <li><a href="#" class="inner">Travels</a></li>
+	                    <li><a href="#" class="inner">Gaming</a></li>
+	                </ul>
+	            </li> -->
+	   <!--  <li><a href="#" class="outer">Contacts</a> 
+	                <ul class="contact-child">
+	                    <li><a href="#" class="inner">Email</a></li>
+	                    <li><a href="#" class="inner">Social Media</a></li>
+	                    <li><a href="#" class="inner">Address</a></li>
+	                </ul>
+	           </li> -->
+	       </ul>
+       <div class="pointer"> </div>
+    </div>  
+
+    <div>
+    	<h2>Obra</h2>
+    	<div class="wrapper">
+    <div class="buttonWrapper">
+      <button class="tab-button active" style="border-top-left-radius: 10px;" data-id="home">DENUNCIA DO EQUILIBRIO (1986)</button>
+      <button class="tab-button" data-id="about">TIGRES COMA CABALOS (1990)</button>
+      <button class="tab-button" style="border-top-right-radius: 10px;" data-id="contact">INTEMPÉRIOME (2003)</button>
+    </div>
+    <div class="contentWrapper">
+      <p class="content active" id="home">
+      <img src="imagen/denuncia.jpg">
+      </p>
+      <p class="content" id="about">
+        <img src="imagen/tigres.jpg">
+      </p>
+      <p class="content" id="contact">
+      	<img src="imagen/intemperiome.jpg">
+  	</p>
+    </div>
+  </div>
+
+</div>
+    	
+       	<!-- script hai que poñelo despois do menu para que se execute despois de que cargue o contido. -->
+        <script>
+		  let cont = document.querySelector(".lines-container");
+		  let menu = document.querySelector(".menu");
+		  let pointer = document.querySelector(".pointer");
+		  //let blog = document.querySelector(".blog");
+		  //let contact = document.querySelector(".contact");
+		  //let blogChild = document.querySelector(".blog-child");
+		  //let contactChild = document.querySelector(".contact-child");
+		  cont.addEventListener("click", () => {
+			//			blog.classList.remove("content");
+			//			contact.classList.remove("content");
+			if (menu.style.maxHeight) {
+				menu.style.maxHeight = null;
+				//blogChild.style.maxHeight = null;
+				//	contactChild.style.maxHeight = null;
+				pointer.style.display = "none";
+				setTimeout(() => {
+					pointer.classList.remove("pointer-up");
+					pointer.style.display = "block";
+				}, 100); //500
+
+			} else {
+				menu.style.maxHeight = menu.scrollHeight + "px";
+				pointer.style.display = "none";
+				setTimeout(() => {
+					pointer.classList.toggle("pointer-up");
+					pointer.style.display = "block";
+				}), 100; //500
+			}
+		  })
+		  pointer.addEventListener("click", () => {
+			// blog.classList.remove("content");
+			// contact.classList.remove("content");
+			if (menu.style.maxHeight) {
+				menu.style.maxHeight = null;
+				// blogChild.style.maxHeight = null;
+				// contactChild.style.maxHeight = null;
+				pointer.style.display = "none";
+				setTimeout(() => {
+					pointer.classList.remove("pointer-up");
+					pointer.style.display = "block";
+				}, 100); //500
+			} else {
+				menu.style.maxHeight = menu.scrollHeight + "px";
+				pointer.style.display = "none";
+				setTimeout(() => {
+					pointer.classList.toggle("pointer-up");
+					pointer.style.display = "block";
+				}, 100); //500
+			 }
+		  })
+		  //		blog.addEventListener("click", () => {
+		  //			if (blogChild.style.maxHeight) {
+		  //				blogChild.style.maxHeight = null;
+		  //				blog.classList.add("btn-anime");
+		  //				blog.classList.remove("content");
+		  //				setTimeout(() => {
+		  //					blog.classList.remove("btn-anime");
+		  //				}, 100);
+		  //			} else {
+		  //				blogChild.style.maxHeight = blogChild.scrollHeight + "px";
+		  //				menu.style.maxHeight = menu.scrollHeight + blogChild.scrollHeight + "px";
+		  //				blog.classList.add("btn-anime");
+		  //				blog.classList.add("content");
+		  //				setTimeout(() => {
+		  //					blog.classList.remove("btn-anime");
+		  //				}, 100);
+		  //			}
+		  //		})
+		  //		contact.addEventListener("click", () => {
+		  // if (contactChild.style.maxHeight) {
+		  // contactChild.style.maxHeight = null;
+		  // contact.classList.add("btn-anime");
+		  // contact.classList.remove("content");
+		  // setTimeout(() => {
+		  // contact.classList.remove("btn-anime");
+		  // }, 100);
+		  // } else {
+		  // contactChild.style.maxHeight = contactChild.scrollHeight + "px";
+		  // menu.style.maxHeight = menu.scrollHeight + contactChild.scrollHeight + "px";
+		  // contact.classList.add("btn-anime");
+		  // contact.classList.add("content");
+		  // setTimeout(() => {
+		  // contact.classList.remove("btn-anime");
+		  // }, 100);
+		  // }
+		  // })
+
+	</script>
+
+	<script type="text/javascript">
+const tabs = document.querySelector(".wrapper");
+const tabButton = document.querySelectorAll(".tab-button");
+const contents = document.querySelectorAll(".content");
+
+tabs.onclick = e => {
+  const id = e.target.dataset.id;
+  if (id) {
+    tabButton.forEach(btn => {
+      btn.classList.remove("active");
+    });
+    e.target.classList.add("active");
+
+    contents.forEach(content => {
+      content.classList.remove("active");
+    });
+    const element = document.getElementById(id);
+    element.classList.add("active");
+  }
+}
+	</script>
+    
+    <div class="mix">
+  	  <img src="imagen/mix.png">    
+	</div>
+	</body>
+</html>
+
