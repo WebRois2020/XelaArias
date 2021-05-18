@@ -443,11 +443,17 @@ h5,
 h6 {
   line-height: 36px;
 }
-h3 {
+h3.brillante {
   font-size: 18px;
 	font-weight: 700;
 	text-decoration: underline;
 	color:lawngreen;
+} 
+h3{
+  font-size: 18px;
+	font-weight: 700;
+	text-decoration: underline;
+	color:  #bfbfbf;
 }
 h3 small {
   font-size: 14px;
