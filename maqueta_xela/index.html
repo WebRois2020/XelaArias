@@ -26,10 +26,9 @@
 	<script src="js/formvalidation.js"></script>
 	<script src="js/html5placeholder.jquery.js"></script>
 	<script src="js/jquery.tweet.js"></script>
-	
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<!-- <script type="text/javascript">
 		alert("Estás entrando nunha Web sobre Xela Arias");
-
 	</script> -->
 </head>
 <body>
@@ -52,12 +51,13 @@
 				<!-- Left menu links -->
 				<ul class="nav leftmenu">
 					<li><a href="about.html">Vida</a></li>
-					<!-- <li><a href="portofolio.html">Obra</a></li> -->
+					<li><a href="galeria.html">Galería</a></li> 
+					<li><a href="../index.html">Portada</a></li> 
 				</ul>
 				<!-- Right menu links -->
 				<ul class="nav rightmenu">
 					<li><a href="portofolio.html">Obra</a></li> 
-					<!-- <li class="lastmenu"><a href="#" class="lastmenu">Archivos</a></li> -->
+				<li class="lastmenu"><a href="contact.html" class="lastmenu">Contacto</a></li> 
 				</ul>
 				<!-- End Menu Links
 			================================================== -->
@@ -151,17 +151,11 @@
 	<script>
 		 window.onload = cargar;
 		  function cargar() {
-			alert("Está entrando nunha Web sobre Xela Arias");
+//			alert("Está entrando nunha Web sobre Xela Arias");
+			 swal("Boas!", "Está entrando nunha páxina Web sobre Xela Arias!",{
+    			className: "blue-bg",});
 		   }
 	</script>
-	<!--<script>
-		document.getElementById('prueba').onfocus = function cambioColor() {
-			document.getElementById('prueba').textContent = "Lorena Carlés Maquetadora Web";
-			document.getElementById('prueba').getElementsByClassName("footer center").style = "Color: red;";
-		}
-	</script>-->
-	
-	
 	<div class="row">
 		<div class="span16">
 			<div id="myCarousel" class="carousel slide">
